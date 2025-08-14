@@ -1,8 +1,21 @@
+"use client";
+
 import Footer from "@/components/ui/footer";
-// import Navbar from "@/components/ui/navbar";
-export default function Home() {
+// import GetInvolved from "@/lib/git-involved/page";
+import DonatePage from "@/lib/Donate/page";
+import Navbar from "@/components/ui/navbar";
+
+function App() {
   return (
-    // <Navbar />
-    <Footer />
+    <>
+      <Navbar />
+      {/* Main Page Content */}
+      {/* <GetInvolved /> */}
+
+      <DonatePage />
+      <Footer />
+    </>
   );
 }
+
+export default App;
