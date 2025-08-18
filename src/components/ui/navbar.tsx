@@ -91,9 +91,7 @@ export default function Navbar() {
             >
               Get Involved
             </Link>
-            <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
-              Contact
-            </Link>
+
             <Link
               href="/donate"
               className="flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-4 py-2 m-4 rounded-full transition"
