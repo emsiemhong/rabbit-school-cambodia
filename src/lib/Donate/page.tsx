@@ -35,7 +35,7 @@ const DonatePage = () => {
         </p>
 
         {/* In-kind Items */}
-        <h3 className="font-bold mb-2">Resource Donations</h3>
+        <h5 className="font-bold mb-2">Resource Donations</h5>
         <ul className="list-disc list-inside text-gray-700 mb-6">
           <p>
             If you would like to contribute with resources, these are things
@@ -50,7 +50,7 @@ const DonatePage = () => {
         </ul>
 
         {/* Bank Info */}
-        <h3 className="font-bold mb-2">Financial</h3>
+        <h5 className="font-bold mb-2">Financial</h5>
         <div className=" rounded mb-6">
           <p className="text-gray-700 mb-2">
             If you would like to make a financial contribution please deposit
