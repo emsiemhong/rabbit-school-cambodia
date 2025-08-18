@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700.52 705.55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="403.48" y="84.43" width="226.5" height="226.5" transform="translate(99.95 -166.16) rotate(20.19)"/>
+  <circle class="cls-2" cx="523.78" cy="508.76" r="127.41"/>
+  <polygon class="cls-1" points="198.77 77.85 57.43 322.65 340.1 322.65 198.77 77.85"/>
+  <polygon class="cls-1" points="332.03 555.78 304.48 417.8 171.22 372.68 65.5 465.52 93.06 603.5 226.32 648.62 332.03 555.78"/>
+</svg>
