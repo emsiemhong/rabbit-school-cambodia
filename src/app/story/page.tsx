@@ -3,7 +3,8 @@
 import Navbar from "@/components/ui/navbar";
 import Image from "next/image";
 import React, { useState } from "react";
-import ImageHero from "@/public/hero-pic.webp"; // File must exist in public folder
+import Footer from "@/components/ui/footer";
+import "./globals.css";
 
 const Page = () => {
   const [active, setActive] = useState(0); // store the index of active button
@@ -19,7 +20,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#F7F5F4]">
+      <div className="bg-[#F7F5F4] mb-20">
         <section className="relative w-full h-[60vh] sm:h-[30vh] md:h-screen">
           {/* Background Image */}
           <Image
@@ -69,7 +70,7 @@ const Page = () => {
             ))}
           </div>
         </div>
-        <section className="px-4 md:px-16 py-8">
+        <section className="px-3 md:px-16 py-8">
           <div className="md:flex md:gap-8 items-center mb-8 ">
             <div className="md:w-1/2">
               <h2 className=" md:text-4xl max-sm:text-2xl font-bold mb-4 text-[#623D3C] Acumin Condensed Black">
@@ -85,35 +86,41 @@ const Page = () => {
                 self-help, cognitive, and social skills.
               </p>
               <ul className="list-disc ml-5 mb-4 Helvetica Neue">
-                <h3 className="text-xl text-black font-bold p-2 max-sm:text-[18px]">
-                  Readiness Classes (Ages 4–6)
-                </h3>
-                <li>Self-help and independence skills</li>
-                <li>Social and emotional development</li>
-                <li> Preparation for inclusive or integrated classrooms</li>
-
-                <h2 className="text-xl text-black font-bold p-2max-sm:text-[18px] ">
-                  Two Learning Pathways (Ages 6–16)
-                </h2>
-                <li>Adapted curriculum designed to each student’s level</li>
-                <li>
-                  Access to support services like speech and occupational
-                  therapy
-                </li>
-                <li>Individual Education Plan (IEP) updated every 3 months</li>
-
-                <h3 className="text-xl text-black font-bold p-2 max-sm:text-[18px]">
-                  Individualized Education Plans
-                </h3>
-                <li>Students with and without disabilities learn together</li>
-                <li>Teachers receive ongoing support from our team</li>
-                <li>
-                  Follow national curriculum with adapted teaching methods{" "}
-                </li>
-                <li>
-                  {" "}
-                  Focus on peer interaction, mutual respect, and inclusion
-                </li>
+                <div className="mb-4">
+                  <h3 className=" text-black font-bold  text-xl max-sm:text-[18px]">
+                    Readiness Classes (Ages 4–6)
+                  </h3>
+                  <li>Self-help and independence skills</li>
+                  <li>Social and emotional development</li>
+                  <li> Preparation for inclusive or integrated classrooms</li>
+                </div>
+                <div className="mb-4">
+                  <h2 className="text-xl text-black font-bold p-2max-sm:text-[18px] ">
+                    Two Learning Pathways (Ages 6–16)
+                  </h2>
+                  <li>Adapted curriculum designed to each student’s level</li>
+                  <li>
+                    Access to support services like speech and occupational
+                    therapy
+                  </li>
+                  <li>
+                    Individual Education Plan (IEP) updated every 3 months
+                  </li>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl text-black font-bold p-2 max-sm:text-[18px]">
+                    Individualized Education Plans
+                  </h3>
+                  <li>Students with and without disabilities learn together</li>
+                  <li>Teachers receive ongoing support from our team</li>
+                  <li>
+                    Follow national curriculum with adapted teaching methods{" "}
+                  </li>
+                  <li>
+                    {" "}
+                    Focus on peer interaction, mutual respect, and inclusion
+                  </li>
+                </div>
               </ul>
               <p className="Helvetica Neue">
                 Specialized classrooms and inclusive methods prepare students to
@@ -135,7 +142,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="md:flex md:gap-8 items-center mb-16 md:flex-row-reverse">
+          <div className="md:flex md:gap-8 items-center mb-16 md:flex-row-reverse mx-auto">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
                 Vocational Training & Job Placement
@@ -225,25 +232,24 @@ const Page = () => {
                 </li>
               </ul>
             </div>
-            <div className="md:w-1/2 mt-6 md:mt-0 rounded-lg p-4 group">
-              <div
-                className="overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform 
+
+            <div
+              className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform 
                 hover:-translate-y-1 hover:scale-105 
                 active:scale-95 active:translate-y-0"
-              >
-                <Image
-                  src="/image.png"
-                  alt="Vocational Training"
-                  width={600}
-                  height={200}
-                  className="rounded-lg"
-                />
-              </div>
+            >
+              <Image
+                src="/image.png"
+                alt="Vocational Training"
+                width={600}
+                height={200}
+                className="rounded-lg"
+              />
             </div>
           </div>
         </section>
 
-        <section className="px-4 md:px-8 py-8 space-y-8">
+        <section className="px-5 md:px-15 py-8 space-y-8">
           <div className="md:flex md:gap-8 items-center">
             <div className="md:w-1/2 relative">
               {!isPlaying ? (
@@ -279,18 +285,18 @@ const Page = () => {
                 />
               )}
             </div>
-            <div className="md:w-1/2 mt-6 md:mt-0">
+            <div className="md:w-1/2  ">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
                 Making Paper Bags for Bodia
               </h2>
-              <p className="text-base md:text-lg text-gray-700 Helvetica Neue">
+              <p className="text-base  text-black Helvetica Neue">
                 Our students currently produce handmade paper bags for Bodia, a
                 business that sells 100% natural Cambodian wellness products.
                 This activity is well-suited for students with intellectual
                 disabilities, as each one can participate meaningfully in the
                 process—from folding and gluing to quality checks.
               </p>
-              <p className="mt-2 text-base md:text-lg text-gray-700 Helvetica Neue">
+              <p className="mt-2 text-base md:text-lg text-black Helvetica Neue">
                 Beyond this, we also collaborate with external partners to
                 facilitate job placements and support our students in taking
                 their first steps into the world of work.
@@ -311,7 +317,7 @@ const Page = () => {
             className="rounded-lg shadow-lg 5 mx-auto"
           />
 
-          <p className="text-base md:text-lg text-gray-700 Helvetica Neue">
+          <p className="text-base  text-black Helvetica Neue">
             In 2025, Rabbit School opened its first-ever Speech Unit and Sensory
             Lab at our Tuol Kork campus in Phnom Penh. This space offers
             specialized support for children with autism and intellectual
@@ -326,7 +332,7 @@ const Page = () => {
           </p>
 
           <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-gray-800 md:p-8 ">
-            <p className="italic Playfair Display md:text-xl max-sm:px-5">
+            <p className="italic font-playfair md:text-xl max-sm:px-5 text-2xl font-bold 6">
               “What autistic kids need is adapted speech stimulation,” explains
               Judy. “First, we help them move beyond suffering. Then we gently
               invite them to interact and find pleasure in their voice. With
@@ -335,7 +341,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <section className="py-16 bg-white shadow-lg">
+        <section className="py-16 bg-white shadow-md">
           <div className="max-w-6xl mx-auto px-4">
             {/* Title */}
             <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-4 text-center">
@@ -343,7 +349,7 @@ const Page = () => {
             </h2>
 
             {/* Description */}
-            <p className="text-gray-600 text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-black  max-w-8xl  mb-12 ">
               We work closely with local authorities and parents to integrate
               Rabbit School’s programs into the public system. At the same time,
               we work to break down the stigma around intellectual
@@ -389,32 +395,38 @@ const Page = () => {
             {/* Row 2 (scrollable gallery) */}
           </div>
         </section>
-        <div className="overflow-x-auto">
-          <div className="flex gap-6 pb-4">
-            {[
-              "/gallery-1.jpg",
-              "/gallery-2.jpg",
-              "/gallery-3.jpg",
-              "/gallery-4.jpg",
-              "/gallery-5.jpg",
-              "/gallery-6.jpg",
-            ].map((src, i) => (
-              <div
-                key={i}
-                className="min-w-[250px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
-              >
-                <Image
-                  src={src}
-                  alt={`Activity ${i + 1}`}
-                  width={300}
-                  height={200}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
-            ))}
+        <div className="mt-20 ">
+          <h3 className="text-2xl Helvetica Neue font-bold p-5">
+            Activities In School
+          </h3>
+          <div className="overflow-x-auto ">
+            <div className="flex gap-6 pb-4">
+              {[
+                "/a3.jpg",
+                "/a4.jpg",
+                "/a5.png",
+                "/a6.png",
+                "/a7.png",
+                "/a8.png",
+              ].map((src, i) => (
+                <div
+                  key={i}
+                  className="min-w-[250px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+                >
+                  <Image
+                    src={src}
+                    alt={`Activity ${i + 1}`}
+                    width={300}
+                    height={200}
+                    className="w-full h-55 object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      <Footer />;
     </>
   );
 };
