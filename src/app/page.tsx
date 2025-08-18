@@ -1,8 +1,7 @@
 "use client";
 
 import Footer from "@/components/ui/footer";
-// import GetInvolved from "@/lib/git-involved/page";
-import DonatePage from "@/lib/Donate/page";
+
 import Navbar from "@/components/ui/navbar";
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
       {/* Main Page Content */}
       {/* <GetInvolved /> */}
 
-      <DonatePage />
       <Footer />
     </>
   );
