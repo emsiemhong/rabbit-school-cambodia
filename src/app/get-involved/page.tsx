@@ -4,6 +4,7 @@ import Link from "next/link";
 import pic from "../public/next.png";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import { FaHandHoldingHeart } from "react-icons/fa";
 import { HandCoins, Handshake, Users } from "lucide-react";
 const GetInvolvedPage = () => {
   return (
@@ -40,9 +41,15 @@ const GetInvolvedPage = () => {
               programs, ensuring the highest quality education and <br></br>{" "}
               opportunities for our students.
             </p>
-            <Link href="/donate">
+            {/* <Link href="/donate">
               <button className="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition">
-                🧡 Donate
+                 Donate
+              </button>
+            </Link> */}
+            <Link href="/donate">
+              <button className="flex items-center gap-2 bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition">
+                <FaHandHoldingHeart className="text-lg" />
+                Donate
               </button>
             </Link>
           </div>
