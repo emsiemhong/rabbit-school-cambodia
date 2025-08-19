@@ -31,7 +31,6 @@ const DonatePage = () => {
           portal. Simply complete the donation form below or contact your local
           office for support
         </p>
-
         {/* In-kind Items */}
         <h3 className="font-bold mb-2">Resource Donations</h3>
         <ul className="list-disc list-inside text-gray-700 mb-6">
@@ -46,7 +45,7 @@ const DonatePage = () => {
           <li>Children’s books in Khmer</li>
           <li>Physiotherapy special devices and toys</li>
         </ul>
-
+        get-involved
         {/* Bank Info */}
         <h3 className="font-bold mb-2">Financial</h3>
         <div className=" rounded mb-6">
@@ -55,7 +54,6 @@ const DonatePage = () => {
             you donation to the following bank account:
           </p>
         </div>
-
         {/* ABA QR Code Section */}
         <div className="flex justify-center my-6">
           <div className="bg-white border rounded-lg p-6 flex items-center">

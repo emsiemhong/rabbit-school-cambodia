@@ -72,7 +72,6 @@ const GetInvolvedPage = () => {
             />
           </div>
         </section>
-
         {/* Join Hands */}
         <section className="bg-gray-100 py-8 px-6 flex flex-col md:flex-row items-center gap-6">
           <div className="flex-1">
