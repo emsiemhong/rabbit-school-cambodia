@@ -1,8 +1,7 @@
-//
-
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 const DonatePage = () => {
@@ -14,14 +13,16 @@ const DonatePage = () => {
   return (
     <>
       <Navbar />
-      {/* Main Donate Page Content */}
+
       <div className="font-sans">
         {/* Top Banner */}
         <section className="relative w-full h-64 flex items-center justify-center bg-blue-100">
-          <img
+          <Image
             src="/images/donate.png"
             alt="Children"
-            className="absolute inset-0 w-full h-full object-cover opacity-70"
+            fill
+            className="object-cover opacity-70"
+            priority
           />
         </section>
 
@@ -37,9 +38,10 @@ const DonatePage = () => {
             payment portal. Simply complete the donation form below or contact
             your local office for support
           </p>
-
           {/* In-kind Items */}
-          <h5 className="font-bold mb-2 text-[#623D3C]">Resource Donations</h5>
+          <h3 className="text-xl font-bold mb-2 text-[#623D3C]">
+            Resource Donations
+          </h3>
           <ul className="list-disc list-inside text-gray-700 mb-6">
             <p>
               If you would like to contribute with resources, these are things
@@ -54,22 +56,23 @@ const DonatePage = () => {
           </ul>
 
           {/* Bank Info */}
-          <h5 className="font-bold mb-2 text-[#623D3C]">Financial</h5>
-          <div className=" rounded mb-6">
-            <p className="text-gray-700 mb-2 ">
+          <h3 className=" text-xl font-bold mb-2 text-[#623D3C]">Financial</h3>
+          <div className="rounded mb-6">
+            <p className="text-gray-700 mb-2">
               If you would like to make a financial contribution please deposit
               you donation to the following bank account:
             </p>
           </div>
-
           {/* ABA QR Code Section */}
           <div className="flex justify-center my-6">
             <div className="bg-white border rounded-lg p-6 flex items-center">
               {/* QR Code */}
-              <img
+              <Image
                 src="/images/QR.png"
                 alt="ABA QR Code"
-                className="w-40 h-40 object-contain"
+                width={160}
+                height={160}
+                className="object-contain"
               />
 
               {/* Vertical Divider */}
@@ -77,7 +80,7 @@ const DonatePage = () => {
 
               {/* Bank Info */}
               <div>
-                <h3 className="text-xl font-bold mb-3  ">ABA</h3>
+                <h3 className="text-xl font-bold mb-3">ABA</h3>
                 <p>
                   <strong>Bank:</strong> ABA Bank Plc
                 </p>
@@ -94,7 +97,6 @@ const DonatePage = () => {
       </div>
       <>
         <Footer />
-        {/* Get Involved Section */}
       </>
     </>
   );
