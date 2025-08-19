@@ -9,22 +9,23 @@ const ContactSection: React.FC = () => {
   return (
     <>
       <Navbar />
-      <section className="w-full px-4 md:px-8 lg:px-16 py-10">
+
+      {/* Section 1 - Info + Image */}
+      <section className="w-full px-4 md:px-8 lg:px-16 py-12 bg-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Left Side */}
+          {/* Left - Contact Info */}
           <div>
-            <h2 className="text-2xl font-bold mb-2">Get in touch</h2>
-            <p className="text-gray-600 mb-4">
+            <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
+            <p className="text-gray-600 mb-6">
               Have any questions? We&#39;d love to hear from you!
             </p>
 
-            <div className="space-y-2 text-gray-700 text-sm">
+            <div className="space-y-4 text-gray-700 text-sm">
               <p>
-                <label htmlFor=""></label>
                 <span className="font-semibold">E-mail:</span>{" "}
                 <a
                   href="mailto:sor.sothearorn@rabbitschoolcambodia.net"
-                  className="text-black-600 font-bold underline"
+                  className="text-blue-600 underline"
                 >
                   sor.sothearorn@rabbitschoolcambodia.net
                 </a>
@@ -35,10 +36,10 @@ const ContactSection: React.FC = () => {
                 <a
                   href="https://goo.gl/maps/yMiBC2MgTr1kUyoh6"
                   target="_blank"
-                  className="text-black-600 font-bold underline"
                   rel="noopener noreferrer"
+                  className="text-blue-600 underline"
                 >
-                  https://goo.gl/maps/yMiBC2MgTr1kUyoh6
+                  Toul Kork Primary School, Phnom Penh
                 </a>
               </p>
 
@@ -47,50 +48,66 @@ const ContactSection: React.FC = () => {
                 971 / 885 17 525 815
               </p>
             </div>
-            {/* Right Side - Map Placeholder */}
-            <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-              {/* Replace with an iframe for Google Map if needed */}
-              <span className="text-gray-500">Map / Image here</span>
-            </div>
 
-            <p className="mt-4 text-gray-600 text-sm">
-              Please use the contact information above, or fill the form:
+            <p className="text-gray-600 mt-6 text-sm">
+              Please use the contact information above, or fill the form below:
             </p>
+          </div>
 
-            <h3 className="mt-6 text-lg font-bold">General Inquiries</h3>
-
-            {/* Form */}
-            <form className="mt-4 space-y-4">
-              <label htmlFor="">Your Name*</label>
-              <input
-                type="text"
-                placeholder=""
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <label htmlFor="">Your Email*</label>
-              <input
-                type="email"
-                placeholder=""
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-              <label htmlFor="">Your</label>
-              <textarea
-                placeholder=""
-                rows={3}
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded text-sm hover:bg-blue-300"
-              >
-                Send
-              </button>
-            </form>
+          {/* Right - Image / Map */}
+          <div className="w-full h-64 md:h-80 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+            {/* Replace with real image or Google Maps iframe */}
+            <img
+              src="/contact-map.jpg"
+              alt="Map or Location"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
+
+      {/* Section 2 - Contact Form */}
+      <section className="w-full px-4 md:px-8 lg:px-16 py-12 ">
+        <div className=" w-[45%] ">
+          <h3 className="text-xl font-bold mb-4">General Inquiries</h3>
+          <form className="space-y-4">
+            <div>
+              <input
+                type="text"
+                placeholder="Your Name*"
+                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                type="email"
+                placeholder="Your Email*"
+                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <div>
+              <textarea
+                rows={4}
+                placeholder="Your Message"
+                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="bg-[#5a2d27] text-white px-5 py-2 rounded-3xl text-sm hover:bg-[#4a241f] transition"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </section>
+
       <Footer />
     </>
   );

@@ -18,7 +18,7 @@ export default function Footer() {
               className="mb-6 h-auto w-auto"
               priority
             />
-            <button className="bg-[#5a2d27] text-white px-5 py-2 rounded-md hover:bg-[#4a241f] transition">
+            <button className="bg-[#5a2d27] text-white px-5 py-2 rounded-3xl hover:bg-[#4a241f] transition">
               Subscribe
             </button>
           </div>
