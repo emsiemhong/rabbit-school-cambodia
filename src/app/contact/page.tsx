@@ -12,11 +12,11 @@ const ContactSection: React.FC = () => {
 
       {/* Section 1 - Info + Image */}
       <section className="w-full px-4 md:px-8 lg:px-16 py-12 bg-white">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 ">
           {/* Left - Contact Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-4">
               Have any questions? We&#39;d love to hear from you!
             </p>
 
@@ -67,44 +67,46 @@ const ContactSection: React.FC = () => {
       </section>
 
       {/* Section 2 - Contact Form */}
-      <section className="w-full px-4 md:px-8 lg:px-16 py-12 ">
-        <div className=" w-[45%] ">
-          <h3 className="text-xl font-bold mb-4">General Inquiries</h3>
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name*"
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+      <section className="w-full py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+          <div className="max-w-2xl">
+            <h3 className="text-xl font-bold mb-4">General Inquiries</h3>
+            <form className="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name*"
+                  className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
 
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email*"
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email*"
+                  className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
 
-            <div>
-              <textarea
-                rows={4}
-                placeholder="Your Message"
-                className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-            </div>
+              <div>
+                <textarea
+                  rows={4}
+                  placeholder="Your Message"
+                  className="w-full border rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
 
-            <button
-              type="submit"
-              className="bg-[#5a2d27] text-white px-5 py-2 rounded-3xl text-sm hover:bg-[#4a241f] transition"
-            >
-              Send
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="bg-[#5a2d27] text-white px-5 py-2 rounded-3xl text-sm hover:bg-[#4a241f] transition"
+              >
+                Send
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
