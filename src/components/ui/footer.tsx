@@ -16,7 +16,7 @@ export default function Footer() {
                 alt="The Rabbit School"
                 className="h-15 w-[80] mb-4"
               />
-              <button className="bg-[#5a2d27] mt-6 text-white px-4 py-2 rounded-md hover:bg-[#4a241f] transition">
+              <button className="bg-[#5a2d27] mt-6 text-white px-4 py-2 rounded-full hover:bg-[#4a241f] transition">
                 Subscribe
               </button>
             </div>
