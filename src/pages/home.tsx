@@ -46,7 +46,7 @@ export default function Home() {
     hidden: { scale: 0 },
     show: {
       scale: [0, 1.3, 1],
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" as [0.17, 0.67, 0.83, 0.67] | "linear" | "easeIn" | "easeOut" | "easeInOut" },
     },
   };
 
