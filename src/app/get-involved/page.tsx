@@ -135,13 +135,16 @@ const GetInvolvedPage = () => {
               more than we ever <br />
               could alone.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#623D3C] text-white py-2 px-6 rounded-full hover:bg-teal-600 transition"
-            >
-              CONTACT US
-            </motion.button>
+
+            <Link href="/contact" passHref>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-[#623D3C] text-white py-2 px-6 rounded-full hover:bg-teal-600 transition"
+              >
+                CONTACT US
+              </motion.button>
+            </Link>
           </motion.div>
 
           <motion.div
