@@ -1,13 +1,14 @@
 // components/Footer.tsx
 import Link from "next/link";
 import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react"; // icons
 
 export default function Footer() {
   return (
     <footer className="bg-gray-200 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[30%_70%] gap-5 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[25%_75%] items-start">
           {/* Left Column - Logo + Subscribe */}
           <div className="flex flex-col items-start">
             <Image
@@ -92,13 +93,20 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Contact with icons */}
             <div>
               <h3 className="font-semibold mb-3 text-gray-900">Contact</h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li>Email: contact@rabbitschool.org</li>
-                <li>Phone: +855 12 345 678</li>
-                <li>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li className="flex items-center gap-2">
+                  <Mail className="w-4 h-4 text-gray-600" />
+                  <span>contact@rabbitschool.org</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-gray-600" />
+                  <span>+855 12 345 678</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-gray-600" />
                   <Link href="#" className="hover:underline">
                     Toul Kork Primary School, Phnom Penh
                   </Link>
@@ -113,7 +121,7 @@ export default function Footer() {
           <p className="text-sm text-gray-600">
             © {new Date().getFullYear()} The Rabbit School. All rights reserved.
           </p>
-          <div className="flex gap-6 text-gray-600 text-lg mt-4 md:mt-0">
+          <div className="flex gap-2 text-gray-600 text-lg mt-4 md:mt-0">
             <Link href="#" className="hover:text-black">
               <i className="fab fa-youtube"></i>
             </Link>
