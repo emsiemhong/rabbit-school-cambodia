@@ -69,7 +69,7 @@ const Page = () => {
             ))}
           </div>
         </div>
-        <section className="px-3 md:px-16 py-8">
+        <section className="px-3 md:px-16 max-sm:px-10 sm:px-10 py-8 text-justify">
           <div className="md:flex md:gap-8 items-center mb-8 ">
             <div className="md:w-1/2">
               <h2 className=" md:text-4xl max-sm:text-2xl font-bold mb-4 text-[#623D3C] Acumin Condensed Black">
@@ -132,7 +132,7 @@ const Page = () => {
                 active:scale-95 active:translate-y-0"
             >
               <Image
-                src="/poor.png"
+                src="/images/poor.png"
                 alt="Vocational Training"
                 width={600}
                 height={400}
@@ -174,7 +174,7 @@ const Page = () => {
                 active:scale-95 active:translate-y-0"
             >
               <Image
-                src="/make.jpeg" // 👈 file from public folder
+                src="/images/make.jpeg" // 👈 file from public folder
                 alt="Vocational Training"
                 width={600} // 👈 you must give width & height
                 height={400}
@@ -238,7 +238,7 @@ const Page = () => {
                 active:scale-95 active:translate-y-0"
             >
               <Image
-                src="/image.png"
+                src="/images/image.png"
                 alt="Vocational Training"
                 width={600}
                 height={200}
@@ -248,7 +248,7 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="px-5 md:px-15 py-8 space-y-8">
+        <section className="px-5 md:px-15 py-8 space-y-8 text-justify max-sm:px-10 sm:px-10">
           <div className="md:flex md:gap-8 items-center">
             <div className="md:w-1/2 relative">
               {!isPlaying ? (
@@ -257,7 +257,7 @@ const Page = () => {
                   onClick={() => setIsPlaying(true)}
                 >
                   <Image
-                    src="/paper.png"
+                    src="/images/paper.png"
                     alt="Making Paper Bags"
                     width={600}
                     height={400}
@@ -303,13 +303,13 @@ const Page = () => {
             </div>
           </div>
         </section>
-        <div className="space-y-6 px-4 md:px-16 py-12">
+        <div className="space-y-6 px-4 md:px-16 py-12 text-justify max-sm:px-10 sm:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
             Cambodia's First Speech Stimulators
           </h2>
 
           <Image
-            src="/7.jpg" // replace with your image
+            src="/images/7.jpg" // replace with your image
             alt="Cambodia's First Speech Stimulators"
             width={1200}
             height={600}
@@ -340,7 +340,7 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <section className="py-16 bg-white shadow-md">
+        <section className="py-16 bg-white shadow-md text-justify max-sm:px-10 sm:px-10">
           <div className="max-w-6xl mx-auto px-4">
             {/* Title */}
             <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-4 text-center">
@@ -362,7 +362,7 @@ const Page = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
                 <Image
-                  src="/sai.jpg"
+                  src="/images/sai.jpg"
                   alt="Event Run with Sai"
                   width={600}
                   height={400}
@@ -401,12 +401,12 @@ const Page = () => {
           <div className="overflow-x-auto ">
             <div className="flex gap-6 pb-4">
               {[
-                "/a3.jpg",
-                "/a4.jpg",
-                "/a5.png",
-                "/a6.png",
-                "/a7.png",
-                "/a8.png",
+                "/images/a3.jpg",
+                "/images/a4.jpg",
+                "/images/a5.png",
+                "/images/a6.png",
+                "/images/a7.png",
+                "/images/a8.png",
               ].map((src, i) => (
                 <div
                   key={i}
