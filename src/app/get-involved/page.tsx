@@ -115,8 +115,8 @@ const GetInvolvedPage = () => {
           </div>
         </section>
 
-        {/* Work With Us */}
-        <section className=" py-12 px-6">
+        <section className="py-12 px-6">
+          {/* Title & Intro */}
           <div className="max-w-5xl mx-auto text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#623D3C]">
               Work With Us
@@ -130,51 +130,64 @@ const GetInvolvedPage = () => {
             </p>
           </div>
 
-          <div className="font-sans">
-            {/* Work With Us Section */}
-            <section className="py-16 px-6">
-              {/* Cards */}
-              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {/* Card 1 - Make a Donation */}
-                <div className="bg-yellow-300 rounded-2xl shadow-lg p-8 text-left">
-                  <HandCoins className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Make a Donation
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Every contribution helps us strengthen and expand our
-                    programs, ensuring the highest quality education and
-                    opportunities for our students.
-                  </p>
-                </div>
+          {/* Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto font-sans">
+            {/* Card 1 - Make a Donation */}
+            <div className="bg-yellow-300 rounded-2xl shadow-lg p-8 text-left">
+              <Image
+                src="/images/donation.png" // put donation.png in /public/icons/
+                alt="Donation Icon"
+                width={40}
+                height={40}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-bold text-black mb-2">
+                Make a Donation
+              </h3>
+              <p className="text-black/80 text-sm">
+                Every contribution helps us strengthen and expand our programs,
+                ensuring the highest quality education and opportunities for our
+                students.
+              </p>
+            </div>
 
-                {/* Card 2 - Join Hands */}
-                <div className="bg-blue-400 rounded-2xl shadow-lg p-8 text-left">
-                  <Handshake className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Join Hands with Us
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Partner your company with Rabbit School to create
-                    opportunities for children and youth with intellectual
-                    disabilities and autism in Cambodia.
-                  </p>
-                </div>
+            {/* Card 2 - Join Hands */}
+            <div className="bg-blue-400 rounded-2xl shadow-lg p-8 text-left">
+              <Image
+                src="/images/join.png" // put handshake.png in /public/icons/
+                alt="Join Hands Icon"
+                width={40}
+                height={40}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-bold text-black mb-2">
+                Join Hands with Us
+              </h3>
+              <p className="text-black/80 text-sm">
+                Partner your company with Rabbit School to create opportunities
+                for children and youth with intellectual disabilities and autism
+                in Cambodia.
+              </p>
+            </div>
 
-                {/* Card 3 - Work with Us */}
-                <div className="bg-orange-300 rounded-2xl shadow-lg p-8 text-left">
-                  <Users className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Work with us
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Join our passionate team and help empower children and youth
-                    with intellectual disabilities and autism to reach their
-                    full potential.
-                  </p>
-                </div>
-              </div>
-            </section>
+            {/* Card 3 - Work with Us */}
+            <div className="bg-orange-300 rounded-2xl shadow-lg p-8 text-left">
+              <Image
+                src="/images/work.png" // put work.png in /public/icons/
+                alt="Work With Us Icon"
+                width={40}
+                height={40}
+                className="mb-4"
+              />
+              <h3 className="text-lg font-bold text-black mb-2">
+                Work with us
+              </h3>
+              <p className="text-black/80 text-sm">
+                Join our passionate team and help empower children and youth
+                with intellectual disabilities and autism to reach their full
+                potential.
+              </p>
+            </div>
           </div>
         </section>
       </div>
