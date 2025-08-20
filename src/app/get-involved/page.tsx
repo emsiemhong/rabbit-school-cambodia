@@ -1,19 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import pic from "../public/next.png";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import { HandCoins, Handshake, Users } from "lucide-react";
+import { FaHandHoldingHeart } from "react-icons/fa";
+import { motion } from "framer-motion";
+
 const GetInvolvedPage = () => {
   return (
     <>
       <Navbar />
-      {/* Main Get Involved Page Content */}
 
-      <div className="">
+      <div className="font-sans">
         {/* Intro */}
-        <section className="text-center py-8 max-w-3xl mx-auto px-4">
+        <motion.section
+          className="text-center py-8 max-w-3xl mx-auto px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <h1 className="text-4xl font-bold mb-6 text-[#623D3C]">
             GET INVOLVED
           </h1>
@@ -24,92 +32,143 @@ const GetInvolvedPage = () => {
             the reason a child can grow up with dignity, opportunity, and
             self-reliance.
           </p>
-        </section>
+        </motion.section>
 
         {/* Make a Donation */}
-        <section
+        <motion.section
           className="py-12 px-6 flex flex-col md:flex-row items-center justify-between gap-4"
           style={{ backgroundColor: "#8BAEA7" }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="flex-1">
+          <motion.div
+            className="flex-1"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="text-2xl mb-4 font-semibold text-[#623D3C]">
               Make a Donation
             </h1>
             <p className="text-gray-800 mb-4">
-              Every contribution helps us strengthen and expand our <br></br>{" "}
-              programs, ensuring the highest quality education and <br></br>{" "}
+              Every contribution helps us strengthen and expand our <br />
+              programs, ensuring the highest quality education and <br />
               opportunities for our students.
             </p>
             <Link href="/donate">
-              <button className="bg-orange-500 text-white py-2 px-6 rounded-full hover:bg-orange-600 transition">
-                🧡 Donate
-              </button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 bg-orange-500 text-white py-2 px-4 rounded-full hover:bg-orange-600 transition"
+              >
+                <FaHandHoldingHeart className="text-lg" />
+                Donate
+              </motion.button>
             </Link>
-          </div>
-          <div className="flex gap-2 md:gap-2">
-            <Image
-              src="/images/sun1.png"
-              alt="Sun icon"
-              width={80}
-              height={80}
-            />
-          </div>
+          </motion.div>
 
-          <div className="flex gap-2 md:gap-2">
-            <Image
-              src="/images/sun1.png"
-              alt="Sun icon"
-              width={100}
-              height={100}
-            />
-          </div>
-          <div className="flex gap-2 md:gap-2">
-            <Image
-              src="/images/sun1.png"
-              alt="Sun icon"
-              width={120}
-              height={120}
-            />
-          </div>
-        </section>
+          {/* Sun Images */}
+          <motion.div
+            className="flex gap-4 items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+          >
+            {[80, 100, 120].map((size, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Image
+                  src="/images/sun1.png"
+                  alt="Sun icon"
+                  width={size}
+                  height={size}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.section>
+
         {/* Join Hands */}
-        <section className="bg-gray-100 py-8 px-6 flex flex-col md:flex-row items-center gap-6">
-          <div className="flex-1">
-            <h1 className=" text-2xl mb-4 font-semibold text-[#623D3C]">
+        <motion.section
+          className="bg-gray-100 py-8 px-6 flex flex-col md:flex-row items-center gap-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="flex-1"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-2xl mb-4 font-semibold text-[#623D3C]">
               Join Hands with Us
             </h1>
             <p className="text-gray-700 mb-4">
               At Rabbit School, we deeply value partnerships with companies that
-              share our <br></br>
+              share our <br />
               vision for a more inclusive Cambodia. We believe the best
-              collaborations consider <br></br>
+              collaborations consider <br />
               the interests and benefits of both sides—building relationships
-              where everyone can <br></br>
+              where everyone can <br />
               grow. By joining forces, we combine our strengths to bring
-              lasting, positive change <br></br>
+              lasting, positive change <br />
               to the community and create real opportunities for children and
-              youth with <br></br>
+              youth with <br />
               intellectual disabilities and autism. Together, we can achieve
-              more than we ever <br></br>
+              more than we ever <br />
               could alone.
             </p>
-            <button className="bg-[#623D3C] text-white py-2 px-6 rounded-full hover:bg-teal-600 transition">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#623D3C] text-white py-2 px-6 rounded-full hover:bg-teal-600 transition"
+            >
               CONTACT US
-            </button>
-          </div>
-          <div className="flex justify-center">
+            </motion.button>
+          </motion.div>
+
+          <motion.div
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+          >
             <Image
-              src="/images/img1.png" // <-- place your image in public/images
+              src="/images/img1.png"
               alt="Join Hands"
               width={400}
               height={300}
               className="rounded-xl shadow"
             />
-          </div>
-        </section>
+          </motion.div>
+        </motion.section>
 
-        {/* Work With Us */}
-        <section className=" py-12 px-6">
+        {/* Work With Us Section */}
+        <motion.section
+          className="py-12 px-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="max-w-5xl mx-auto text-center mb-10">
             <h2 className="text-2xl font-semibold text-[#623D3C]">
               Work With Us
@@ -123,57 +182,53 @@ const GetInvolvedPage = () => {
             </p>
           </div>
 
-          <div className="font-sans">
-            {/* Work With Us Section */}
-            <section className="py-16 px-6">
-              {/* Cards */}
-              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {/* Card 1 - Make a Donation */}
-                <div className="bg-yellow-300 rounded-2xl shadow-lg p-8 text-left">
-                  <HandCoins className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Make a Donation
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Every contribution helps us strengthen and expand our
-                    programs, ensuring the highest quality education and
-                    opportunities for our students.
-                  </p>
-                </div>
-
-                {/* Card 2 - Join Hands */}
-                <div className="bg-blue-400 rounded-2xl shadow-lg p-8 text-left">
-                  <Handshake className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Join Hands with Us
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Partner your company with Rabbit School to create
-                    opportunities for children and youth with intellectual
-                    disabilities and autism in Cambodia.
-                  </p>
-                </div>
-
-                {/* Card 3 - Work with Us */}
-                <div className="bg-orange-300 rounded-2xl shadow-lg p-8 text-left">
-                  <Users className="w-8 h-8 text-black mb-4" />
-                  <h3 className="text-lg font-bold text-black mb-2">
-                    Work with us
-                  </h3>
-                  <p className="text-black/80 text-sm">
-                    Join our passionate team and help empower children and youth
-                    with intellectual disabilities and autism to reach their
-                    full potential.
-                  </p>
-                </div>
-              </div>
-            </section>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto font-sans">
+            {[
+              {
+                title: "Make a Donation",
+                text: "Every contribution helps us strengthen and expand our programs, ensuring the highest quality education and opportunities for our students.",
+                image: "/images/donation.png",
+                bg: "bg-yellow-300",
+              },
+              {
+                title: "Join Hands with Us",
+                text: "Partner your company with Rabbit School to create opportunities for children and youth with intellectual disabilities and autism in Cambodia.",
+                image: "/images/join.png",
+                bg: "bg-blue-400",
+              },
+              {
+                title: "Work with us",
+                text: "Join our passionate team and help empower children and youth with intellectual disabilities and autism to reach their full potential.",
+                image: "/images/work.png",
+                bg: "bg-orange-300",
+              },
+            ].map((card, idx) => (
+              <motion.div
+                key={idx}
+                className={`${card.bg} rounded-2xl shadow-lg p-8 text-left`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.5, delay: idx * 0.2 }}
+              >
+                <Image
+                  src={card.image}
+                  alt={`${card.title} icon`}
+                  width={40}
+                  height={40}
+                  className="mb-4"
+                />
+                <h3 className="text-lg font-bold text-black mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-black/80 text-sm">{card.text}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.section>
       </div>
-      <>
-        <Footer />
-      </>
+
+      <Footer />
     </>
   );
 };
