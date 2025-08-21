@@ -4,37 +4,64 @@ import Navbar from "@/components/ui/navbar";
 import Image from "next/image";
 import React, { useState } from "react";
 import Footer from "@/components/ui/footer";
+import { useEffect } from "react";
 
 const Page = () => {
-  const [active, setActive] = useState(0); // store the index of active button
-  const [isPlaying, setIsPlaying] = useState(false); // state to control video playback
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [visibleSections, setVisibleSections] = useState<string[]>([]);
 
   const buttons = [
-    "Education Programs",
-    "Vocational Training & Job Placement",
-    "Teacher Training",
-    "Advocacy And Community Building",
+    { label: "Education Programs", id: "education-programs" },
+    { label: "Vocational Training & Job Placement", id: "vocational-training" },
+    { label: "Teacher Training", id: "teacher-training" },
+    { label: "Advocacy And Community Building", id: "advocacy" },
   ];
+  useEffect(() => {
+    const sections = document.querySelectorAll("section, div[data-animate]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id =
+              entry.target.getAttribute("id") ||
+              (entry.target instanceof HTMLElement
+                ? entry.target.dataset.animate
+                : undefined);
+            if (id && !visibleSections.includes(id)) {
+              setVisibleSections((prev) => [...prev, id]);
+            }
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, [visibleSections]);
+
+  const isVisible = (id: string) => visibleSections.includes(id);
 
   return (
     <>
       <Navbar />
-      <div className="bg-[#F7F5F4] mb-20">
+      <div className="bg-[#F7F5F4] ">
         <section className="relative w-full h-[60vh] sm:h-[30vh] md:h-screen">
-          {/* Background Image */}
           <Image
-            src="/ss.jpg"
+            src="/images/ss.jpg"
             alt="Rabbit School"
             fill
             priority
             className="object-cover"
           />
 
-          {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
-          {/* Text content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-8 Acumin-Condensed-Black font-extrabold">
+          <div
+            className={`absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-8 Acumin-Condensed-Black font-extrabold transition-opacity duration-1000 ease-in-out opacity-0 ${
+              isVisible("hero") ? "opacity-100" : ""
+            }`}
+            data-animate="hero"
+          >
             <h1 className="sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
               How We Work
             </h1>
@@ -47,29 +74,31 @@ const Page = () => {
           </div>
         </section>
 
-        <div className="bg-white py-8 text-center shadow-gray-500/80   transition-colors">
+        <div className="bg-white py-8 text-center shadow-gray-500/80   transition-colors ">
           <h3 className=" sm:text-2xl max-sm:text-2xl md:text-4xl  text-[#623D3C] Acumin Condensed Black font-extrabold mb-5">
             Learn More About Our Programs
           </h3>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
+
+          <div className=" flex flex-wrap justify-center gap-4 mt-6">
             {buttons.map((btn, index) => (
-              <button
+              <a
                 key={index}
-                onClick={() => setActive(index)} // set active button on click
-                className={`px-4 py-2 rounded-full text-sm  transition-colors bg-[#F7F5F4] shadow-gray-500/40 hover:shadow-lg  Acumin Condensed Black font-extrabold text-[#623D3C] max-sm:shadow-gray-500/40  
-            ${
-              active === index
-                ? "bg-yellow-300 hover:bg-yellow-400"
-                : "bg-gray-100 hover:bg-gray-300"
-            }
-          `}
+                href={`#${btn.id}`}
+                className=" px-4 py-2 rounded-full text-sm transition-colors bg-[#F7F5F4] shadow-gray-500/40 hover:shadow-lg hover:bg-[#FED45F] font-extrabold text-[#623D3C] max-sm:shadow-gray-500/40"
               >
-                {btn}
-              </button>
+                {btn.label}
+              </a>
             ))}
           </div>
         </div>
-        <section className="px-3 md:px-16 max-sm:px-10 sm:px-10 py-8 text-justify">
+        <section
+          className={`px-3 md:px-16 max-sm:px-10 sm:px-10 py-8 text-justify transition-all duration-700 ease-in-out transform ${
+            isVisible("education-programs")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+          id="education-programs"
+        >
           <div className="md:flex md:gap-8 items-center mb-8 ">
             <div className="md:w-1/2">
               <h2 className=" md:text-4xl max-sm:text-2xl font-bold mb-4 text-[#623D3C] Acumin Condensed Black">
@@ -127,8 +156,8 @@ const Page = () => {
               </p>
             </div>
             <div
-              className="md:w-1/2 mt-6 md:mt-0 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform 
-                hover:-translate-y-1 hover:scale-105 
+              className="md:w-1/2 mt-6 md:mt-0 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform
+                hover:-translate-y-1 hover:scale-105
                 active:scale-95 active:translate-y-0"
             >
               <Image
@@ -140,10 +169,18 @@ const Page = () => {
               />{" "}
             </div>
           </div>
-
+        </section>
+        <section
+          className={`px-3 md:px-16 max-sm:px-10 sm:px-10 py-8 text-justify transition-all duration-700 ease-in-out transform ${
+            isVisible("vocational-training")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+          id="vocational-training"
+        >
           <div className="md:flex md:gap-8 items-center mb-16 md:flex-row-reverse mx-auto">
             <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl ">
                 Vocational Training & Job Placement
               </h2>
               <p className="mb-4 Helvetica Neue">
@@ -169,21 +206,28 @@ const Page = () => {
               </p>
             </div>
             <div
-              className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform 
-                hover:-translate-y-1 hover:scale-105 
+              className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform
+                hover:-translate-y-1 hover:scale-105
                 active:scale-95 active:translate-y-0"
             >
               <Image
-                src="/images/make.jpeg" // 👈 file from public folder
+                src="/images/make.jpeg"
                 alt="Vocational Training"
-                width={600} // 👈 you must give width & height
+                width={600}
                 height={400}
                 className="rounded-lg"
               />{" "}
             </div>
           </div>
-
-          {/* Teacher Training */}
+        </section>
+        <section
+          className={`px-3 md:px-16 max-sm:px-10 sm:px-10 py-8 text-justify transition-all duration-700 ease-in-out transform ${
+            isVisible("teacher-training")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+          id="teacher-training"
+        >
           <div className="md:flex md:gap-8 items-center mb-16">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
@@ -233,8 +277,8 @@ const Page = () => {
             </div>
 
             <div
-              className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform 
-                hover:-translate-y-1 hover:scale-105 
+              className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform
+                hover:-translate-y-1 hover:scale-105
                 active:scale-95 active:translate-y-0"
             >
               <Image
@@ -246,9 +290,7 @@ const Page = () => {
               />
             </div>
           </div>
-        </section>
 
-        <section className="px-5 md:px-15 py-8 space-y-8 text-justify max-sm:px-10 sm:px-10">
           <div className="md:flex md:gap-8 items-center">
             <div className="md:w-1/2 relative">
               {!isPlaying ? (
@@ -277,7 +319,7 @@ const Page = () => {
                 </div>
               ) : (
                 <video
-                  src="/video.mp4"
+                  src="/images/video.mp4"
                   controls
                   autoPlay
                   className="rounded-lg w-full"
@@ -309,11 +351,11 @@ const Page = () => {
           </h2>
 
           <Image
-            src="/images/7.jpg" // replace with your image
+            src="/images/7.jpg"
             alt="Cambodia's First Speech Stimulators"
             width={1200}
             height={600}
-            className="rounded-lg shadow-lg 5 mx-auto"
+            className="rounded-lg shadow-lg 5 mx-auto md:h-150 object-cover transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2"
           />
 
           <p className="text-base  text-black Helvetica Neue">
@@ -330,7 +372,7 @@ const Page = () => {
             voice, and take the first steps toward speech.
           </p>
 
-          <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-gray-800 md:p-8 ">
+          <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-gray-800 md:p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
             <p className="italic font-playfair md:text-xl max-sm:px-5 text-2xl font-bold 6">
               “What autistic kids need is adapted speech stimulation,” explains
               Judy. “First, we help them move beyond suffering. Then we gently
@@ -340,14 +382,19 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <section className="py-16 bg-white shadow-md text-justify max-sm:px-10 sm:px-10">
+        <section
+          className={`py-16 bg-white shadow-md text-justify max-sm:px-10 sm:px-10 transition-all duration-700 ease-in-out transform ${
+            isVisible("advocacy")
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
+          }`}
+          id="advocacy"
+        >
           <div className="max-w-6xl mx-auto px-4">
-            {/* Title */}
             <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-4 text-center">
               Advocacy and Community Building
             </h2>
 
-            {/* Description */}
             <p className="text-black  max-w-8xl  mb-12 ">
               We work closely with local authorities and parents to integrate
               Rabbit School’s programs into the public system. At the same time,
@@ -358,9 +405,8 @@ const Page = () => {
               valued for who they are and the contributions they can make.
             </p>
 
-            {/* Row 1 */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
                 <Image
                   src="/images/sai.jpg"
                   alt="Event Run with Sai"
@@ -375,9 +421,9 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
                 <Image
-                  src="/mother.webp"
+                  src="/images/mother.webp"
                   alt="Parents’ Training"
                   width={600}
                   height={400}
@@ -390,16 +436,14 @@ const Page = () => {
                 </div>
               </div>
             </div>
-
-            {/* Row 2 (scrollable gallery) */}
           </div>
         </section>
-        <div className="mt-20 ">
+        <div className=" mt-20 md:px-16 max-sm:px-10 sm:px-10 mb-20 ">
           <h3 className="text-2xl Helvetica Neue font-bold p-5">
             Activities In School
           </h3>
-          <div className="overflow-x-auto ">
-            <div className="flex gap-6 pb-4">
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className="flex gap-6 pb-4 ">
               {[
                 "/images/a3.jpg",
                 "/images/a4.jpg",
@@ -410,14 +454,14 @@ const Page = () => {
               ].map((src, i) => (
                 <div
                   key={i}
-                  className="min-w-[250px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+                  className="min-w-[250px] bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2"
                 >
                   <Image
                     src={src}
                     alt={`Activity ${i + 1}`}
                     width={300}
                     height={200}
-                    className="w-full h-55 object-cover"
+                    className="w-full h-55 object-cover "
                   />
                 </div>
               ))}
