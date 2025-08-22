@@ -70,7 +70,7 @@ const Page = () => {
             data-animate="hero"
             data-aos="fade-up"
           >
-            <h1 className="sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
+            <h1 className=" font-acumin sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
               How We Work
             </h1>
             <p className=" font- mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl">
