@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 "use client";
 
 import { useState } from "react";
@@ -9,6 +8,34 @@ import { HiMenu, HiX } from "react-icons/hi";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [locale, setLocale] = useState<"en" | "km">("en");
+
+  // Translation object
+  const translations = {
+    en: {
+      home: "Home",
+      about: "About Us",
+      howWeWork: "How We Work",
+      getInvolved: "Get Involved",
+      contact: "Contact",
+      donate: "Donate",
+      language: "ខ្មែរ",
+    },
+    km: {
+      home: "ទំព័រដើម",
+      about: "អំពីពួកយើង",
+      howWeWork: "របៀបដែលយើងធ្វើការ",
+      getInvolved: "ចូលរួម",
+      contact: "ទំនាក់ទំនង",
+      donate: "បរិច្ចាក",
+      language: "EN",
+    },
+  };
+
+  // Toggle language
+  const toggleLanguage = () => {
+    setLocale(locale === "en" ? "km" : "en");
+  };
 
   return (
     <header className="w-full border-b border-gray-200 bg-white">
@@ -28,26 +55,34 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-800">
           <Link href="/" className="hover:text-yellow-500 transition">
-            Home
+            {translations[locale].home}
           </Link>
           <Link href="/about" className="hover:text-yellow-500 transition">
-            About Us
+            {translations[locale].about}
           </Link>
           <Link
             href="/how-we-work"
             className="hover:text-yellow-500 transition"
           >
-            How We Work
+            {translations[locale].howWeWork}
           </Link>
           <Link
             href="/get-involved"
             className="hover:text-yellow-500 transition"
           >
-            Get Involved
+            {translations[locale].getInvolved}
           </Link>
           <Link href="/contact" className="hover:text-yellow-500 transition">
-            Contact
+            {translations[locale].contact}
           </Link>
+
+          {/* Language Button */}
+          <button
+            onClick={toggleLanguage}
+            className="ml-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+          >
+            {translations[locale].language}
+          </button>
         </nav>
 
         {/* Donate Button */}
@@ -56,7 +91,7 @@ export default function Navbar() {
           className="hidden md:flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-5 py-2 rounded-full transition"
         >
           <FaHandHoldingHeart />
-          <span>Donate</span>
+          <span>{translations[locale].donate}</span>
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -74,33 +109,45 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-200">
           <nav className="flex flex-col space-y-1">
             <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
-              Home
+              {translations[locale].home}
             </Link>
             <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
-              About Us
+              {translations[locale].about}
             </Link>
             <Link
               href="/how-we-work"
               className="block px-4 py-2 hover:bg-gray-100"
             >
-              How We Work
+              {translations[locale].howWeWork}
             </Link>
             <Link
               href="/get-involved"
               className="block px-4 py-2 hover:bg-gray-100"
             >
-              Get Involved
+              {translations[locale].getInvolved}
             </Link>
-            <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
-              Contact
+            <Link
+              href="/contact"
+              className="block px-4 py-2 hover:bg-gray-100"
+            >
+              {translations[locale].contact}
             </Link>
+
             <Link
               href="/donate"
               className="flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-4 py-2 m-4 rounded-full transition"
             >
               <FaHandHoldingHeart />
-              <span>Donate</span>
+              <span>{translations[locale].donate}</span>
             </Link>
+
+            {/* Mobile Language Button */}
+            <button
+              onClick={toggleLanguage}
+              className="mx-4 px-3 py-1 border border-gray-300 rounded hover:bg-gray-100 transition"
+            >
+              {translations[locale].language}
+            </button>
           </nav>
         </div>
       )}
