@@ -60,10 +60,7 @@ export default function Navbar() {
           <Link href="/about" className="hover:text-yellow-500 transition">
             {translations[locale].about}
           </Link>
-          <Link
-            href="/how-we-work"
-            className="hover:text-yellow-500 transition"
-          >
+          <Link href="/we-work" className="hover:text-yellow-500 transition">
             {translations[locale].howWeWork}
           </Link>
           <Link
@@ -126,10 +123,7 @@ export default function Navbar() {
             >
               {translations[locale].getInvolved}
             </Link>
-            <Link
-              href="/contact"
-              className="block px-4 py-2 hover:bg-gray-100"
-            >
+            <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
               {translations[locale].contact}
             </Link>
 
