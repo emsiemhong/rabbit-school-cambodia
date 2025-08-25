@@ -26,15 +26,17 @@ import logos6 from "../../public/Donates/logo(6).jpg";
 import logos7 from "../../public/Donates/logo(7).png";
 import donate from "../../public/donate.png";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
 import { Gift } from "lucide-react";
 import getInvolvedPic from "../../public/picture/get invulvet.png";
-import { Graduate } from "next/font/google";
+import { useLanguage } from "@/context/Languagecontext";
 
 const logoImages = [logos, logos2, logos3, logos4, logos5, logos6, logos7];
 export default function Home() {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,7 +96,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            EXTRAORDINARY LEARNING FOR EXTRAORDINARY LEARNERS
+            {t("hero.title")}
           </motion.h3>
 
           <motion.p
@@ -103,9 +105,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Providing children and youth with intellectual disabilities and
-            autism access to education, support, confidence, and skills to reach
-            their full potential.
+            {t("hero.description")}
           </motion.p>
 
           <motion.button
@@ -114,7 +114,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            READ MORE
+            {t("hero.button")}
           </motion.button>
         </motion.div>
       </div>
@@ -139,7 +139,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            Our Story
+            {t("story.title")}
           </motion.h3>
 
           {/* Paragraph */}
@@ -149,10 +149,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            The Rabbit School was founded in Phnom Penh in the early 1990s with
-            a bold vision: to ensure that children with intellectual
-            disabilities and autism are given the same right to learn, grow, and
-            thrive as any other child.
+            {t("story.description")}
           </motion.p>
 
           {/* Button */}
@@ -162,7 +159,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            READ MORE
+            {t("story.button")}
           </motion.button>
         </motion.div>
       </div>
@@ -181,7 +178,7 @@ export default function Home() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            How We Work
+            {t("howWeWork.title")}
           </motion.h2>
 
           <motion.p
@@ -190,10 +187,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Our programs empower children and youth with intellectual
-            disabilities to reach their full potential through tailored
-            education, vocational training, inclusive community building, and
-            advocacy for lasting change.
+            {t("howWeWork.description")}
           </motion.p>
 
           {/* Button with scale + hover animation */}
@@ -205,7 +199,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            READ MORE
+            {t("howWeWork.button")}
           </motion.button>
         </motion.div>
 
@@ -241,7 +235,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Our Impact and Reach
+            {t("impact.title")}
           </motion.h2>
 
           <motion.p
@@ -251,9 +245,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Since 1997, Rabbit School has been transforming the lives of
-            children and youth with intellectual disabilities and
-            autism—bringing them hope, learning, and a sense of belonging.
+            {t("impact.description")}
           </motion.p>
 
           {/* Stats Grid with staggered animation */}

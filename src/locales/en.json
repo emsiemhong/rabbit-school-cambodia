@@ -1,0 +1,55 @@
+{
+  "hero": {
+    "title": "EXTRAORDINARY LEARNING FOR EXTRAORDINARY LEARNERS",
+    "description": "Providing children and youth with intellectual disabilities and autism access to education, support, confidence, and skills to reach their full potential.",
+    "button": "READ MORE"
+  },
+  "story": {
+    "title": "Our Story",
+    "description": "The Rabbit School was founded in Phnom Penh in the early 1990s with a bold vision: to ensure that children with intellectual disabilities and autism are given the same right to learn, grow, and thrive as any other child.",
+    "button": "READ MORE"
+  },
+  "howWeWork": {
+    "title": "How We Work",
+    "description": "Our programs empower children and youth with intellectual disabilities to reach their full potential through tailored education, vocational training, inclusive community building, and advocacy for lasting change.",
+    "button": "READ MORE"
+  },
+  "impact": {
+    "title": "Our Impact and Reach",
+    "description": "Since 1997, Rabbit School has been transforming the lives of children and youth with intellectual disabilities and autism—bringing them hope, learning, and a sense of belonging.",
+    "stats": {
+      "beneficiaries": "Have benefited from our education programs since 2013",
+      "students": "Students with intellectual disabilities and autism are currently enrolled in our school",
+      "teachers": "Teachers have received training in special education",
+      "classrooms": "Classrooms in 16 schools are now inclusive learning environments for children with intellectual disabilities"
+    }
+  },
+  "partners": {
+    "title": "Our Partners and Donors",
+    "description": "Working together with our corporate partners, we make a far bigger impact than we could by acting alone. Together we can make real change happen at scale."
+  },
+  "donation": {
+    "title": "Where our money goes",
+    "description": "Your donation will help us continue to deliver critical support to the community and life transforming education opportunities for the most vulnerable. All donations are processed via our secure online payment portal.",
+    "button": "Donate"
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "description": "There are many ways to support Rabbit School and help transform the lives of children and youth with intellectual disabilities and autism in Cambodia. Choose the path that speaks to you—and become the reason a child can grow up with dignity, opportunity, and self-reliance.",
+    "button": "READ MORE"
+  },
+  "newsletter": {
+    "title": "Receive the Happenings",
+    "description": "Subscribe to Our Newsletter for Updates.",
+    "button": "SUBSCRIBE"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "howWeWork": "How We Work",
+    "getInvolved": "Get Involved",
+    "contact": "Contact",
+    "donate": "Donate",
+    "language": "ខ្មែរ"
+  }
+}
