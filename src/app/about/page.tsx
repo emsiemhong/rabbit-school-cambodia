@@ -7,6 +7,7 @@ import Footer from "@/components/ui/footer";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../globals.css";
 
 const Page = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -70,10 +71,13 @@ const Page = () => {
             data-animate="hero"
             data-aos="fade-up"
           >
-            <h1 className=" font-acumin sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
+            <h1
+              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="  sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3"
+            >
               How We Work
             </h1>
-            <p className=" font- mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl">
+            <p className="  mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl ">
               Our programs empower children and youth with intellectual
               disabilities to reach their full potential through tailored
               education, vocational training, inclusive community building, and
@@ -389,14 +393,14 @@ const Page = () => {
             voice, and take the first steps toward speech.
           </p>
 
-          <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-gray-800 md:p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
-            <p className="italic font-playfair md:text-xl max-sm:px-5 text-2xl font-bold 6">
+          <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-[#79A2C9] md:p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
+            <h6 className="italic font-playfair md:text-xl max-sm:px-5 text-2xl font-bold 6">
               “What autistic kids need is adapted speech stimulation,” explains
               Judy. “First, we help them move beyond suffering. Then we gently
               invite them to interact and find pleasure in their voice. With
               these two things combined, speech always follows.” <br /> <br />—
               Judy, Speech Therapist and Trainer of the Speech Stimulators
-            </p>
+            </h6>
           </div>
         </div>
         <section

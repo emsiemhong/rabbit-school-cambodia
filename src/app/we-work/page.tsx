@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import "../globals.css";
 
 const Page = () => {
   const [active, setActive] = useState<number | null>(null);
@@ -41,9 +42,9 @@ const Page = () => {
           <h1 className="text-white  md:text-7xl sm:text-4xl max-sm:text-2xl">
             Our Story:
           </h1>
-          <h2 className="   sm:text-4xl md:text-5xl font-bold drop-shadow-lg shadow-black leading-snug">
+          <h1 className="   sm:text-4xl md:text-5xl font-bold drop-shadow-lg shadow-black leading-snug">
             The Belief That Started It All — Every Child Deserves Opportunity
-          </h2>
+          </h1>
         </div>
       </section>
 
@@ -187,13 +188,13 @@ const Page = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#A81B17]/70 via-[#A81B17]/50 to-[#A81B17]/70" />
 
         <div className=" md:max-w-1/1  relative inset-0 flex flex-col justify-center   md:px-12   font-extrabold  z-10 text-center text-white px-4">
-          <h1 className="text-2xl md:text-4xl font-bold">
+          <h2 className="text-2xl md:text-4xl font-bold">
             What Drives Us: A Belief in Every Child
-          </h1>
-          <p className="mt-4 text-sm md:text-lg">
+          </h2>
+          <h3 className="mt-4 text-sm md:text-lg">
             Every child deserves a chance to reach their full potential—no
             matter their abilities or background.
-          </p>
+          </h3>
         </div>
       </section>
 

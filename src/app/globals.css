@@ -128,3 +128,59 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+@tailwind utilities;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+/* @font-face {
+  font-family: "HelveticaCustom";
+  src: url("/fonts/Helvetica.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AcuminCustom";
+  src: url("/fonts/Acumin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairCustom";
+  src: url("/fonts/PlayfairDisplay-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+} */
+h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+}
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+}
+h2,
+h3,
+h4,
+button,
+a,
+span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
