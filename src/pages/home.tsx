@@ -34,7 +34,6 @@ import { Gift } from "lucide-react";
 import getInvolvedPic from "../../public/images/image copy 7.png";
 import { Graduate } from "next/font/google";
 
-import getInvolvedPic from "../../public/picture/get invulvet.png";
 import { useLanguage } from "@/context/Languagecontext";
 
 const logoImages = [logos, logos2, logos3, logos4, logos5, logos6, logos7];

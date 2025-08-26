@@ -39,7 +39,7 @@ export default function Navbar() {
             {t("navbar.about")}
           </Link>
           <Link
-            href="/how-we-work"
+            href="/we-work"
             className="hover:text-yellow-500 transition"
           >
             {t("navbar.howWeWork")}
