@@ -26,6 +26,7 @@ import logos6 from "../../public/Donates/logo(6).jpg";
 import logos7 from "../../public/Donates/logo(7).png";
 import donate from "../../public/donate.png";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
@@ -33,8 +34,12 @@ import { Gift } from "lucide-react";
 import getInvolvedPic from "../../public/images/image copy 7.png";
 import { Graduate } from "next/font/google";
 
+import getInvolvedPic from "../../public/picture/get invulvet.png";
+import { useLanguage } from "@/context/Languagecontext";
+
 const logoImages = [logos, logos2, logos3, logos4, logos5, logos6, logos7];
 export default function Home() {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,7 +99,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            EXTRAORDINARY LEARNING FOR EXTRAORDINARY LEARNERS
+            {t("hero.title")}
           </motion.h3>
 
           <motion.p
@@ -103,15 +108,21 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Providing children and youth with intellectual disabilities and
-            autism access to education, support, confidence, and skills to reach
-            their full potential.
+            {t("hero.description")}
           </motion.p>
 
          
 
           
 
+          <motion.button
+            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {t("hero.button")}
+          </motion.button>
         </motion.div>
       </div>
       <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px]">
@@ -135,7 +146,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            Our Story
+            {t("story.title")}
           </motion.h3>
 
           {/* Paragraph */}
@@ -145,10 +156,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            The Rabbit School was founded in Phnom Penh in the early 1990s with
-            a bold vision: to ensure that children with intellectual
-            disabilities and autism are given the same right to learn, grow, and
-            thrive as any other child.
+            {t("story.description")}
           </motion.p>
 
           {/* Button */}
@@ -161,6 +169,14 @@ export default function Home() {
               <span className="mx-auto">Read More</span>
             </Link>      
           </div>
+          <motion.button
+            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {t("story.button")}
+          </motion.button>
         </motion.div>
       </div>
       <div className="max-w-full mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#D9D9D9]">
@@ -178,7 +194,7 @@ export default function Home() {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            How We Work
+            {t("howWeWork.title")}
           </motion.h2>
 
           <motion.p
@@ -187,10 +203,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Our programs empower children and youth with intellectual
-            disabilities to reach their full potential through tailored
-            education, vocational training, inclusive community building, and
-            advocacy for lasting change.
+            {t("howWeWork.description")}
           </motion.p>
 
           {/* Button with scale + hover animation */}
@@ -203,6 +216,17 @@ export default function Home() {
               <span className="mx-auto">Read More</span>
             </Link>      
           </div>
+
+          <motion.button
+            className="mt-6 w-32 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.1, rotate: -1 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            {t("howWeWork.button")}
+          </motion.button>
         </motion.div>
 
         {/* Image Section */}
@@ -237,7 +261,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            Our Impact and Reach
+            {t("impact.title")}
           </motion.h2>
 
           <motion.p
@@ -247,9 +271,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            Since 1997, Rabbit School has been transforming the lives of
-            children and youth with intellectual disabilities and
-            autism—bringing them hope, learning, and a sense of belonging.
+            {t("impact.description")}
           </motion.p>
 
           {/* Stats Grid with staggered animation */}
