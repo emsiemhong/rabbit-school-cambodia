@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import pic1 from "../../public/picture/header.jpg";
 import pic3 from "../../public/picture/Screenshot 2025-04-13 at 14.20.06.png";
-import pic2 from "../../public/picture/GNrIBvMbYAAGQej.jpeg";
+import pic2 from "../../public/images/ss.jpg";
 import CountUp from "react-countup";
 import { use } from "react";
 import { motion } from "framer-motion";
@@ -31,6 +31,9 @@ import { HiMenu, HiX } from "react-icons/hi";
 import Link from "next/link";
 import { useState } from "react";
 import { Gift } from "lucide-react";
+import getInvolvedPic from "../../public/images/image copy 7.png";
+import { Graduate } from "next/font/google";
+
 import getInvolvedPic from "../../public/picture/get invulvet.png";
 import { useLanguage } from "@/context/Languagecontext";
 
@@ -108,6 +111,10 @@ export default function Home() {
             {t("hero.description")}
           </motion.p>
 
+         
+
+          
+
           <motion.button
             className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -153,6 +160,15 @@ export default function Home() {
           </motion.p>
 
           {/* Button */}
+          <div className="w-40  mt-8">
+            {" "}
+            <Link
+              href="/about"
+              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+              >
+              <span className="mx-auto">Read More</span>
+            </Link>      
+          </div>
           <motion.button
             className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -191,6 +207,16 @@ export default function Home() {
           </motion.p>
 
           {/* Button with scale + hover animation */}
+          <div className="w-40  mt-8">
+            {" "}
+            <Link
+              href="/we-work"
+              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+              >
+              <span className="mx-auto">Read More</span>
+            </Link>      
+          </div>
+
           <motion.button
             className="mt-6 w-32 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -324,7 +350,7 @@ export default function Home() {
           </motion.div>
         </div>
       </div>
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gray-50 py-16" id="partners">
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#623D3C] mb-4">
@@ -412,17 +438,15 @@ export default function Home() {
           </p>
 
           {/* Button */}
-          <button
-            className="mt-6 w-32 sm:w-40 md:w-[168px] h-10 sm:h-11 md:h-[40px] 
-       bg-[#623D3C]
-       shadow-[5px_5px_4px_rgba(0,0,0,0.25)] 
-       flex items-center justify-center 
-       font-inter font-extrabold text-sm sm:text-base md:text-[20px] text-white
-       rounded-full
-       hover:bg-[#4a241f] transition-colors duration-300 mx-auto md:mx-0"
-          >
-            READ MORE
-          </button>
+          <div className="w-40  mt-8">
+            {" "}
+            <Link
+              href="/get-involved"
+              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+              >
+              <span className="mx-auto">Read More</span>
+            </Link>      
+          </div>
         </div>
 
         {/* Right Side - Image */}
@@ -437,24 +461,29 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="bg-gray-100 py-16">
+      {/* <section className="bg-gray-100 py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          {/* Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Receive the Happenings
           </h2>
 
-          {/* Paragraph */}
           <p className="text-[#623D3C] text-lg max-w-3xl mx-auto mb-8">
             Subscribe to Our Newsletter for Updates.
           </p>
 
-          {/* Subscribe Button */}
-          <button className="bg-[#623D3C] hover:bg-[#4a241f] text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
-            SUBSCRIBE
-          </button>
+          
+
+          <div className="w-40  mt-8 mx-auto">
+            {" "}
+            <Link
+              href="/donate"
+              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#4a241f] text-white font-bold  px-4 py-2 m-4 rounded-full transition mx-auto"
+              >
+              <span className="mx-auto">SUBSCRIBE</span>
+            </Link>      
+          </div>
         </div>
-      </section>
+      </section> */}
     </header>
   );
 }

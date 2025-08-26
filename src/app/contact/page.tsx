@@ -71,7 +71,7 @@ const ContactSection: React.FC = () => {
               <p>
                 <span className="text-gray-600">Address</span> <br />{" "}
                 <a
-                  href="https://goo.gl/maps/yMiBC2MgTr1kUyoh6"
+                  href="https://www.google.com/maps/place/Rabbit+School+Organization/@11.5789927,104.896293,715m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3109510c204573a7:0x5e2af45c46d089d4!8m2!3d11.5789927!4d104.8988679!16s%2Fg%2F11v0zgm5sc?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-black font-bold underline"
@@ -80,9 +80,11 @@ const ContactSection: React.FC = () => {
                 </a>
               </p>
 
-              <p>
+              <p className="flex flex-col-reverse">
+                <a className="text-black font-bold ">
+                  +855 68 901 971 / 885 17 525 815
+                </a>
                 <span className="text-gray-600">Telephone</span>
-                <br /> +855 68 901 971 / 885 17 525 815
               </p>
             </div>
 
@@ -102,7 +104,7 @@ const ContactSection: React.FC = () => {
             <Image
               src={Image2}
               alt="Map or Location"
-              className="w-full h-full object-fill "
+              className="w-full h-full object-cover "
             />
           </motion.div>
         </div>

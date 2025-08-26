@@ -128,3 +128,42 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+@tailwind utilities;
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+
+
+h1 {
+  font-family: "bebasNeue", sans-serif;
+  font-weight: 900;
+}
+h6 {
+  font-family: "playfair", serif;
+  font-weight: 900;
+}
+h2,
+h3,
+h4,
+button,
+a,
+span {
+  font-family: "arial", sans-serif;
+  font-weight: 700;
+}
+p {
+  font-family: "arial", sans-serif;
+}

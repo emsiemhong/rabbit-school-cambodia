@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaHandHoldingHeart } from "react-icons/fa";
+import "../globals.css";
 
 const Page = () => {
   const [active, setActive] = useState<number | null>(null);
@@ -318,13 +319,17 @@ const Page = () => {
       </section>
 
       {/* --- PICTURES OF STUDENTS WITH CLICK TO ENLARGE --- */}
-      <section className="max-w-7xl mx-auto py-16 px-6" data-aos="fade-up">
+      <section
+        className="max-w-7xl mx-auto py-16 px-6"
+        data-aos="fade-up"
+        id="gallery"
+      >
         <div className="mt-20 ">
           <h3 className="text-4xl text-[#623D3C] sm:text-2xl max-sm:text-2xl font-bold p-5 ">
             Picture Of Students
           </h3>
-          <div className="overflow-x-auto ">
-            <div className="flex gap-6 pb-4">
+          <div className="overflow-x-auto  scrollbar-hide ">
+            <div className="flex gap-6 pb-4 scrollbar-hide">
               {[
                 "/images/image copy.png",
                 "/images/image copy 6.png",

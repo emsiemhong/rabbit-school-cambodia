@@ -7,6 +7,7 @@ import Footer from "@/components/ui/footer";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "../globals.css";
 
 const Page = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -70,10 +71,13 @@ const Page = () => {
             data-animate="hero"
             data-aos="fade-up"
           >
-            <h1 className=" font-acumin sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
+            <h1
+              style={{ fontFamily: "'Playfair Display', serif" }}
+              className="  sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3"
+            >
               How We Work
             </h1>
-            <p className=" font- mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl">
+            <p className="  mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl ">
               Our programs empower children and youth with intellectual
               disabilities to reach their full potential through tailored
               education, vocational training, inclusive community building, and
@@ -305,7 +309,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="md:flex md:gap-8 items-center">
+          <div className="md:flex md:gap-8 items-center" id="making-paper">
             <div className="md:w-1/2 relative">
               {!isPlaying ? (
                 <div
@@ -389,15 +393,16 @@ const Page = () => {
             voice, and take the first steps toward speech.
           </p>
 
-          <div className=" mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-gray-800 md:p-8 transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
-            <p className="italic font-playfair md:text-xl max-sm:px-5 text-2xl font-bold 6">
+          
+        </div>
+        <div className="md:m-10 sm:m-10 max-sm:m-10 md:p-10 mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-[#79A2C9]  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
+          <h6 className="italic  md:text-2xl max-sm:px-5  font-bold 6">
               “What autistic kids need is adapted speech stimulation,” explains
               Judy. “First, we help them move beyond suffering. Then we gently
               invite them to interact and find pleasure in their voice. With
               these two things combined, speech always follows.” <br /> <br />—
               Judy, Speech Therapist and Trainer of the Speech Stimulators
-            </p>
-          </div>
+          </h6>
         </div>
         <section
           className={`py-16 bg-white shadow-md text-justify max-sm:px-10 sm:px-10 transition-all duration-700 ease-in-out transform ${
