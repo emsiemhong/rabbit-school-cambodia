@@ -38,20 +38,20 @@ export default function Footer() {
               <h3 className="font-semibold mb-3 text-gray-900">Our Program</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>
-                  <Link href="/about#education-programs">
+                  <Link href="/we-work#education-programs">
                     Education Program
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#vocational-training">
+                  <Link href="/we-work#vocational-training">
                     Vocational Training
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about#teacher-training">Teacher Training</Link>
+                  <Link href="/we-work#teacher-training">Teacher Training</Link>
                 </li>
                 <li>
-                  <Link href="/about#advocacy">Advocacy & Community</Link>
+                  <Link href="/we-work#advocacy">Advocacy & Community</Link>
                 </li>
               </ul>
             </div>
@@ -61,10 +61,10 @@ export default function Footer() {
               <h3 className="font-semibold mb-3 text-gray-900">About Us</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>
-                  <Link href="/we-work">Our Story</Link>
+                  <Link href="/about">Our Story</Link>
                 </li>
                 <li>
-                  <Link href="/we-work">Where We Work</Link>
+                  <Link href="/about">Where We Work</Link>
                 </li>
                 <li>
                   <Link href="/#partners">Our Partners</Link>
@@ -110,13 +110,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="text-sm flex items-center gap-3 mb-3">
-                {/* <Mail className="w-5 h-5 text-gray-600" />
-                <a
-                  href="mailto:contact@rabbitschool.org"
-                  className="text-blue-600 hover:underline"
-                >
-                  contact@rabbitschool.org
-                </a> */}
+                
                 <Mail className="w-5 h-5 text-gray-600" />
                 <p>
                   <a

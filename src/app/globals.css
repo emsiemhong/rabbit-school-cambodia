@@ -144,32 +144,15 @@
 .animate-fadeInUp {
   animation: fadeInUp 1s ease-out forwards;
 }
-/* @font-face {
-  font-family: "HelveticaCustom";
-  src: url("/fonts/Helvetica.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "AcuminCustom";
-  src: url("/fonts/Acumin.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "PlayfairCustom";
-  src: url("/fonts/PlayfairDisplay-Italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-} */
+
 h1 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "bebasNeue", sans-serif;
   font-weight: 900;
 }
 h6 {
-  font-family: "Playfair Display", serif;
+  font-family: "playfair", serif;
   font-weight: 900;
 }
 h2,
@@ -178,9 +161,9 @@ h4,
 button,
 a,
 span {
-  font-family: "Roboto", sans-serif;
+  font-family: "arial", sans-serif;
   font-weight: 700;
 }
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "arial", sans-serif;
 }
