@@ -5,11 +5,12 @@ import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-import { FaHandHoldingHeart } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useForm } from "react-hook-form";
+import { useLanguage } from "@/context/Languagecontext";
 
 const GetInvolvedPage = () => {
+  const { t } = useLanguage();
+
   return (
     <>
       <Navbar />
@@ -24,26 +25,14 @@ const GetInvolvedPage = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-4xl font-bold mb-6 text-[#623D3C]">
-            GET INVOLVED
+            {t("getInvolvedPage.hero.title")}
           </h1>
           <p className="text-gray-700">
-            There are many ways to support Rabbit School and help transform the
-            lives of children and youth with intellectual disabilities and
-            autism in Cambodia. Choose the path that speaks to you—and become
-            the reason a child can grow up with dignity, opportunity, and
-            self-reliance.
+            {t("getInvolvedPage.hero.description")}
           </p>
         </motion.section>
 
-        {/* Join Hands */}
-        <motion.section
-          className="bg-gray-100 px-6 flex flex-col md:flex-row items-center gap-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6 }}
-        ></motion.section>
-
+        {/* Cards Section */}
         <motion.section
           className="py-12 px-6"
           initial={{ opacity: 0 }}
@@ -54,28 +43,28 @@ const GetInvolvedPage = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto font-sans">
             {[
               {
-                title: "Make a Donation",
-                text: "Every contribution helps us strengthen and expand our programs, ensuring the highest quality education and opportunities for our students.",
+                title: t("getInvolvedPage.cards.donation.title"),
+                text: t("getInvolvedPage.cards.donation.text"),
                 image: "/images/donation.png",
                 bg: "bg-yellow-300",
                 link: "/donate",
-                button: "Donate now",
+                button: t("getInvolvedPage.cards.donation.button"),
               },
               {
-                title: "Join Hands with Us",
-                text: "Partner your company with Rabbit School to create opportunities for children and youth with intellectual disabilities and autism in Cambodia.",
+                title: t("getInvolvedPage.cards.join.title"),
+                text: t("getInvolvedPage.cards.join.text"),
                 image: "/images/join.png",
                 bg: "bg-blue-400",
                 link: "/contact",
-                button: "Join with us",
+                button: t("getInvolvedPage.cards.join.button"),
               },
               {
-                title: "Work with us",
-                text: "Join our passionate team and help empower children and youth with intellectual disabilities and autism to reach their full potential.",
+                title: t("getInvolvedPage.cards.work.title"),
+                text: t("getInvolvedPage.cards.work.text"),
                 image: "/images/work.png",
                 bg: "bg-orange-300",
                 link: "/jobs",
-                button: "Jobs & Work",
+                button: t("getInvolvedPage.cards.work.button"),
               },
             ].map((card, idx) => (
               <motion.div
@@ -100,15 +89,13 @@ const GetInvolvedPage = () => {
                   <p className="text-[#623D3C] text-sm mb-6">{card.text}</p>
                 </div>
 
-                {/* Button with underline */}
+                {/* Button */}
                 <Link
                   href={card.link}
-                  className="block w-25 border-b-2 border-black group-hover:border-gray-700 transition"
+                  className="relative inline-block text-black border-b-2 border-black group"
                 >
                   {card.button}
-
-                  {/* Animated underline */}
-                  <span className="absolute text-black/90 left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}

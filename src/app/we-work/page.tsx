@@ -71,7 +71,7 @@ const Page = () => {
             data-aos="fade-up"
           >
             <h1 className=" font-acumin sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
-              How We Work
+              We Work for an Inclusive Future
             </h1>
             <p className=" font- mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl">
               Our programs empower children and youth with intellectual
