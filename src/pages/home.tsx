@@ -113,14 +113,7 @@ export default function Home() {
 
           
 
-          <motion.button
-            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {t("hero.button")}
-          </motion.button>
+          
         </motion.div>
       </div>
       <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px]">
@@ -167,14 +160,7 @@ export default function Home() {
               <span className="mx-auto">Read More</span>
             </Link>      
           </div>
-          <motion.button
-            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {t("story.button")}
-          </motion.button>
+          
         </motion.div>
       </div>
       <div className="max-w-full mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#D9D9D9]">
@@ -215,16 +201,7 @@ export default function Home() {
             </Link>      
           </div>
 
-          <motion.button
-            className="mt-6 w-32 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.1, rotate: -1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            {t("howWeWork.button")}
-          </motion.button>
+          
         </motion.div>
 
         {/* Image Section */}
@@ -459,29 +436,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <section className="bg-gray-100 py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Receive the Happenings
-          </h2>
-
-          <p className="text-[#623D3C] text-lg max-w-3xl mx-auto mb-8">
-            Subscribe to Our Newsletter for Updates.
-          </p>
-
-          
-
-          <div className="w-40  mt-8 mx-auto">
-            {" "}
-            <Link
-              href="/donate"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#4a241f] text-white font-bold  px-4 py-2 m-4 rounded-full transition mx-auto"
-              >
-              <span className="mx-auto">SUBSCRIBE</span>
-            </Link>      
-          </div>
-        </div>
-      </section> */}
+      
     </header>
   );
 }

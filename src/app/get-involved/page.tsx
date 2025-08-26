@@ -103,12 +103,11 @@ const GetInvolvedPage = () => {
                 {/* Button with underline */}
                 <Link
                   href={card.link}
-                  className="block w-25 border-b-2 border-black group-hover:border-gray-700 transition"
+                  className=" w-25   transition hover:text-red-500 font-semibold "
                 >
                   {card.button}
 
                   {/* Animated underline */}
-                  <span className="absolute text-black/90 left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </motion.div>
             ))}
