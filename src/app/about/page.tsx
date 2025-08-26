@@ -49,7 +49,7 @@ const Page = () => {
       </section>
 
       {/* --- SECTION 1 --- */}
-      <div className="bg-white p-6 md:p-12 drop-shadow-lg shadow-black">
+      <div className="bg-white p-6 md:p-12 drop-shadow-lg shadow-black" id="story">
         <div
           className="flex flex-col md:flex-row-reverse md:gap-8 items-center md:items-start "
           data-aos="fade-left"
