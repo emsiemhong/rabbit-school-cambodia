@@ -51,5 +51,143 @@
     "contact": "Contact",
     "donate": "Donate",
     "language": "ខ្មែរ"
+  },
+
+  "ourStoryPage": {
+    "hero": {
+      "title": "Our Story:",
+      "subtitle": "The Belief That Started It All — Every Child Deserves Opportunity"
+    },
+    "section1": {
+      "title": "A Belief that Started it All",
+      "text": "The Rabbit School is a Cambodian NGO that began in May 1997 as a pilot project to provide education to children with special needs..."
+    },
+    "section2": {
+      "title": "Growing with the Community",
+      "text": "What started as a small initiative within an orphanage has grown into a nationally recognized organization dedicated to inclusive education..."
+    },
+    "section3": {
+      "title": "Reaching Further",
+      "text": "Since 2014, The Rabbit School has expanded its impact to other parts of the country..."
+    },
+    "section4": {
+      "title": "Our Ongoing Commitment",
+      "text": "Today, The Rabbit School stands as a beacon of inclusive education in Cambodia..."
+    },
+    "banner": {
+      "title": "What Drives Us: A Belief in Every Child",
+      "text": "Every child deserves a chance to reach their full potential—no matter their abilities or background."
+    },
+    "whyCambodia": {
+      "title": "Why Cambodia",
+      "marginalized": {
+        "title": "A Deeply Marginalized Group",
+        "text": "In Cambodia, children with intellectual disabilities remain among the most excluded..."
+      },
+      "poverty": {
+        "title": "Barriers Made Worse by Poverty",
+        "text": "Poverty intensifies every challenge..."
+      },
+      "exist": {
+        "title": "Why We Exist",
+        "text": "The Rabbit School is here to change that..."
+      }
+    },
+    "coreDrivers": {
+      "title": "Our Core Drivers",
+      "empowerment1": {
+        "title": "Empowerment",
+        "text": "Supporting children and families..."
+      },
+      "empowerment2": {
+        "title": "Empowerment",
+        "text": "Supporting children and families..."
+      },
+      "empowerment3": {
+        "title": "Empowerment",
+        "text": "Supporting children and families..."
+      }
+    },
+    "pictures": { "title": "Picture Of Students" },
+    "sdg": {
+      "title": "Aligned with the UN SDG Goals",
+      "text": "Our work supports inclusive and equitable quality education, decent work, and reduced inequalities.",
+      "donate": "donate"
+    }
+  },
+  "getInvolvedPage": {
+    "hero": {
+      "title": "Get Involved Today",
+      "description": "Join us in making a difference..."
+    },
+    "cards": {
+      "donation": {
+        "title": "Make a Donation",
+        "text": "Every contribution helps us strengthen and expand our programs, ensuring the highest quality education and opportunities for our students.",
+        "button": "Donate now"
+      },
+      "join": {
+        "title": "Join Hands with Us",
+        "text": "Partner your company with Rabbit School to create opportunities for children and youth with intellectual disabilities and autism in Cambodia.",
+        "button": "Join with us"
+      },
+      "work": {
+        "title": "Work with us",
+        "text": "Join our passionate team and help empower children and youth with intellectual disabilities and autism to reach their full potential.",
+        "button": "Jobs & Work"
+      }
+    }
+  },
+  "contactSection": {
+    "section1": {
+      "title": "Get in touch",
+      "description": "Have any questions? We'd love to hear from you!",
+      "emailLabel": "E-mail",
+      "email": "sor.sothearorn@rabbitschoolcambodia.net",
+      "addressLabel": "Address",
+      "address": "Toul Kork Primary School, Phnom Penh",
+      "telephoneLabel": "Telephone",
+      "telephone": "+855 68 901 971 / 885 17 525 815",
+      "instruction": "Please use the contact information above, or fill the form below:"
+    },
+    "section2": {
+      "title": "General Inquiries",
+      "nameLabel": "Your Name",
+      "nameError": "Name is required",
+      "emailLabel": "Your Email",
+      "emailErrorRequired": "Email is required",
+      "emailErrorPattern": "Enter a valid email",
+      "messageLabel": "Your Message",
+      "messageError": "Message is required",
+      "sendButton": "Send",
+      "sendingButton": "Sending...",
+      "successMessage": "✅ Thank you! Your message has been sent."
+    }
+  },
+
+  "donatePage": {
+    "hero": {
+      "title": "Donate Now",
+      "description": "Your donation will help us continue to deliver critical support to the community and life transforming education opportunities for the most vulnerable. All donations are processed via our secure online payment portal. Simply complete the donation form below or contact your local office for support."
+    },
+    "resourceDonations": {
+      "title": "Resource Donations",
+      "intro": "If you would like to contribute with resources, these are things that are needed most:",
+      "items": [
+        "School materials such as books, pencils, DVDs (player) and educational games",
+        "Children’s books in Khmer",
+        "Physiotherapy special devices and toys"
+      ]
+    },
+    "financial": {
+      "title": "Financial",
+      "description": "If you would like to make a financial contribution please deposit your donation to the following bank account:"
+    },
+    "aba": {
+      "title": "ABA",
+      "bank": "ABA Bank Plc",
+      "accountName": "Rabbit School",
+      "accountNumber": "2900-01-005152-1-2"
+    }
   }
 }

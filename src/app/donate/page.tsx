@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import { useLanguage } from "@/context/Languagecontext";
+
 const DonatePage = () => {
+  const { t } = useLanguage();
   const [frequency, setFrequency] = useState("monthly");
   const [amount, setAmount] = useState<number | null>(null);
 
@@ -29,38 +32,33 @@ const DonatePage = () => {
         {/* Main Content */}
         <section className="max-w-3xl mx-auto px-6 py-10">
           <div className="relative text-center z-10 max-w-3xl mx-auto px-6 py-10">
-            <h1 className="text-4xl font-bold text-[#623D3C]">Donate Now</h1>
+            <h1 className="text-4xl font-bold text-[#623D3C]">
+              {t("donatePage.hero.title")}
+            </h1>
           </div>
           <p className="text-gray-700 text-center mb-6">
-            Your donation will help us continue to deliver critical support to
-            the community and life transforming education opportunities for the
-            most vulnerable. All donations are processed via our secure online
-            payment portal. Simply complete the donation form below or contact
-            your local office for support
+            {t("donatePage.hero.description")}
           </p>
           {/* In-kind Items */}
           <h3 className="text-xl font-bold mb-2 text-[#623D3C]">
-            Resource Donations
+            {t("donatePage.resourceDonations.title")}
           </h3>
           <ul className="list-disc list-inside text-gray-700 mb-6">
-            <p>
-              If you would like to contribute with resources, these are things
-              that are needed most :
-            </p>
-            <li>
-              School materials such as books, pencils DVDs (player) and
-              educational games
-            </li>
-            <li>Children’s books in Khmer</li>
-            <li>Physiotherapy special devices and toys</li>
+            <p>{t("donatePage.resourceDonations.intro")}</p>
+            {(
+              t("donatePage.resourceDonations.items") as unknown as string[]
+            ).map((item: string, index: number) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
 
           {/* Bank Info */}
-          <h3 className=" text-xl font-bold mb-2 text-[#623D3C]">Financial</h3>
+          <h3 className=" text-xl font-bold mb-2 text-[#623D3C]">
+            {t("donatePage.financial.title")}
+          </h3>
           <div className="rounded mb-6">
             <p className="text-gray-700 mb-2">
-              If you would like to make a financial contribution please deposit
-              you donation to the following bank account:
+              {t("donatePage.financial.description")}
             </p>
           </div>
           {/* ABA QR Code Section */}
@@ -80,15 +78,19 @@ const DonatePage = () => {
 
               {/* Bank Info */}
               <div>
-                <h3 className="text-xl font-bold mb-3">ABA</h3>
+                <h3 className="text-xl font-bold mb-3">
+                  {t("donatePage.aba.title")}
+                </h3>
                 <p>
-                  <strong>Bank:</strong> ABA Bank Plc
+                  <strong>Bank:</strong> {t("donatePage.aba.bank")}
                 </p>
                 <p>
-                  <strong>Account name:</strong> Rabbit School
+                  <strong>Account name:</strong>{" "}
+                  {t("donatePage.aba.accountName")}
                 </p>
                 <p>
-                  <strong>Account number:</strong> 2900-01-005152-1-2
+                  <strong>Account number:</strong>{" "}
+                  {t("donatePage.aba.accountNumber")}
                 </p>
               </div>
             </div>
