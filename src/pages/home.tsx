@@ -86,7 +86,7 @@ export default function Home() {
 
         {/* Text + Button with animation */}
         <motion.div
-          className="absolute inset-0 flex flex-col justify-end px-4 sm:px-12 md:px-20 pb-16 sm:pb-32 md:pb-40 max-w-3xl text-white"
+          className="absolute inset-0 flex flex-col justify-end px-4 sm:px-12 md:px-20 pb-16  md:pb-70 max-sm:pb-50 sm:pb-50 max-w-3xl text-white"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -155,10 +155,10 @@ export default function Home() {
             {" "}
             <Link
               href="/about"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
-              >
-              <span className="mx-auto">Read More</span>
-            </Link>      
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+            >
+              <span className="mx-auto">{t("story.button")}</span>
+            </Link>
           </div>
           
         </motion.div>
@@ -195,10 +195,10 @@ export default function Home() {
             {" "}
             <Link
               href="/we-work"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
-              >
-              <span className="mx-auto">Read More</span>
-            </Link>      
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+            >
+              <span className="mx-auto">{t("howWeWork.button")}</span>
+            </Link>
           </div>
 
           
@@ -268,9 +268,7 @@ export default function Home() {
               <h3 className="text-3xl font-extrabold text-gray-800">
                 <CountUp end={4474} duration={3} />+
               </h3>
-              <p className="text-gray-600">
-                Have benefited from our education programs since 2013
-              </p>
+              <p className="text-gray-600">{t("impact.stats.beneficiaries")}</p>
             </motion.div>
 
             {/* Item 2 */}
@@ -284,10 +282,7 @@ export default function Home() {
               <h3 className="text-3xl font-extrabold text-gray-800">
                 <CountUp end={850} duration={3} />+
               </h3>
-              <p className="text-gray-600">
-                Students with intellectual disabilities and autism are currently
-                enrolled in our school
-              </p>
+              <p className="text-gray-600">{t("impact.stats.students")}</p>
             </motion.div>
 
             {/* Item 3 */}
@@ -301,9 +296,7 @@ export default function Home() {
               <h3 className="text-3xl font-extrabold text-gray-800">
                 <CountUp end={54} duration={3} />+
               </h3>
-              <p className="text-gray-600">
-                Teachers have received training in special education
-              </p>
+              <p className="text-gray-600">{t("impact.stats.teachers")}</p>
             </motion.div>
 
             {/* Item 4 */}
@@ -317,10 +310,7 @@ export default function Home() {
               <h3 className="text-3xl font-extrabold text-gray-800">
                 <CountUp end={124} duration={3} />+
               </h3>
-              <p className="text-gray-600">
-                Classrooms in 16 schools are now inclusive learning environments
-                for children with intellectual disabilities
-              </p>
+              <p className="text-gray-600">{t("impact.stats.classrooms")}</p>
             </motion.div>
           </motion.div>
         </div>
@@ -329,12 +319,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           {/* Title */}
           <h2 className="text-3xl md:text-4xl font-bold text-[#623D3C] mb-4">
-            Our Partners and Donors
+            {t("partners.title")}
           </h2>
           <p className="text-[#623D3C] text-lg max-w-3xl mx-auto mb-10">
-            Working together with our corporate partners, we make a far bigger
-            impact than we could by acting alone. Together we can make real
-            change happen at scale.
+            {t("partners.description")}
           </p>
 
           {/* Scrolling Logos */}
@@ -366,13 +354,10 @@ export default function Home() {
         {/* Left Side - Text */}
         <div className="text-center md:text-left md:ml-12 lg:ml-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-4">
-            Where our money goes
+            {t("donation.title")}
           </h2>
           <p className="text-[#623D3C] mb-6 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-            Your donation will help us continue to deliver critical support to
-            the community and life transforming education opportunities for the
-            most vulnerable. All donations are processed via our secure online
-            payment portal.
+            {t("donation.description")}
           </p>
 
           <div className="w-30">
@@ -381,7 +366,7 @@ export default function Home() {
               className="hidden text-center md:flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-5 py-2 rounded-full transition"
             >
               <FaHandHoldingHeart />
-              <span>Donate</span>
+              <span>{t("donation.button")}</span>
             </Link>
           </div>
         </div>
@@ -402,25 +387,21 @@ export default function Home() {
         {/* Left Side - Text */}
         <div className="text-center md:text-left md:ml-12 lg:ml-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-4">
-            Get Involved
+            {t("getInvolved.title")}
           </h2>
           <p className="text-[#623D3C] mb-6 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
-            There are many ways to support Rabbit School and help transform the
-            lives of children and youth with intellectual disabilities and
-            autism in Cambodia. Choose the path that speaks to you—and become
-            the reason a child can grow up with dignity, opportunity, and
-            self-reliance.
+            {t("getInvolved.description")}
           </p>
 
-          {/* Button */}
+          {/* Button with scale + hover animation */}
           <div className="w-40  mt-8">
             {" "}
             <Link
-              href="/get-involved"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
-              >
-              <span className="mx-auto">Read More</span>
-            </Link>      
+              href="/we-work"
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+            >
+              <span className="mx-auto">{t("howWeWork.button")}</span>
+            </Link>
           </div>
         </div>
 
