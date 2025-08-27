@@ -92,18 +92,10 @@ const GetInvolvedPage = () => {
                 {/* Button */}
                 <Link
                   href={card.link}
-<<<<<<< HEAD
-                  className=" w-25   transition hover:text-red-500 font-semibold "
+                  className="relative inline-block text-black border-b-2 w-23 border-black group"
                 >
                   {card.button}
-
-                  {/* Animated underline */}
-=======
-                  className="relative inline-block text-black border-b-2 border-black group"
-                >
-                  {card.button}
-                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
->>>>>>> 077d6dbf9ee12b90c9d4735c3fda5158a15462ae
+                  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-23"></span>
                 </Link>
               </motion.div>
             ))}
