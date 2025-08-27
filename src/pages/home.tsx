@@ -86,7 +86,7 @@ export default function Home() {
 
         {/* Text + Button with animation */}
         <motion.div
-          className="absolute inset-0 flex flex-col justify-end px-4 sm:px-12 md:px-20 pb-16 sm:pb-32 md:pb-40 max-w-3xl text-white"
+          className="absolute inset-0 flex flex-col justify-end px-4 sm:px-12 md:px-20 pb-16  md:pb-70 max-sm:pb-50 sm:pb-50 max-w-3xl text-white"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -109,14 +109,6 @@ export default function Home() {
             {t("hero.description")}
           </motion.p>
 
-          <motion.button
-            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {t("hero.button")}
-          </motion.button>
         </motion.div>
       </div>
       <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px]">
@@ -158,19 +150,11 @@ export default function Home() {
             {" "}
             <Link
               href="/about"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
             >
-              <span className="mx-auto">Read More</span>
+              <span className="mx-auto">{t("story.button")}</span>
             </Link>
           </div>
-          <motion.button
-            className="mt-6 w-36 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {t("story.button")}
-          </motion.button>
         </motion.div>
       </div>
       <div className="max-w-full mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-[#D9D9D9]">
@@ -205,22 +189,12 @@ export default function Home() {
             {" "}
             <Link
               href="/we-work"
-              className="flex items-center space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
             >
-              <span className="mx-auto">Read More</span>
+              <span className="mx-auto">{t("howWeWork.button")}</span>
             </Link>
           </div>
 
-          <motion.button
-            className="mt-6 w-32 sm:w-40 md:w-48 h-10 sm:h-11 md:h-12 bg-[#623D3C] hover:bg-[#4a241f] shadow-md flex items-center justify-center font-inter font-extrabold text-sm sm:text-base md:text-lg text-white rounded-full transition-colors duration-300"
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.1, rotate: -1 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            {t("howWeWork.button")}
-          </motion.button>
         </motion.div>
 
         {/* Image Section */}
@@ -412,18 +386,16 @@ export default function Home() {
             {t("getInvolved.description")}
           </p>
 
-          {/* Button */}
-          <button
-            className="mt-6 w-32 sm:w-40 md:w-[168px] h-10 sm:h-11 md:h-[40px] 
-       bg-[#623D3C]
-       shadow-[5px_5px_4px_rgba(0,0,0,0.25)] 
-       flex items-center justify-center 
-       font-inter font-extrabold text-sm sm:text-base md:text-[20px] text-white
-       rounded-full
-       hover:bg-[#4a241f] transition-colors duration-300 mx-auto md:mx-0"
-          >
-            READ MORE
-          </button>
+          {/* Button with scale + hover animation */}
+          <div className="w-40  mt-8">
+            {" "}
+            <Link
+              href="/we-work"
+              className="flex items-center w-40 space-x-2 bg-[#623D3C] hover:bg-[#922C2C] text-white font-medium px-4 py-2 m-4 rounded-full transition"
+            >
+              <span className="mx-auto">{t("howWeWork.button")}</span>
+            </Link>
+          </div>
         </div>
 
         {/* Right Side - Image */}
@@ -437,21 +409,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-      {/* <section className="bg-gray-100 py-16">
-        <header className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {t("newsletter.title")}
-          </h2>
-
-          <p className="text-[#623D3C] text-lg max-w-3xl mx-auto mb-8">
-            {t("newsletter.description")}
-          </p>
-
-          {/* Subscribe Button */}
-      <button className="bg-[#623D3C] hover:bg-[#4a241f] text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">
-        SUBSCRIBE
-      </button>
     </header>
   );
 }

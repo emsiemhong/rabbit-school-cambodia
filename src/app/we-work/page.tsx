@@ -8,8 +8,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../globals.css";
+import { useLanguage } from "@/context/Languagecontext";
 
 const Page = () => {
+  const { t } = useLanguage();
   const [isPlaying, setIsPlaying] = useState(false);
   const [visibleSections, setVisibleSections] = useState<string[]>([]);
 
@@ -72,13 +74,10 @@ const Page = () => {
             data-aos="fade-up"
           >
             <h1 className=" font-acumin sm:text-4xl max-sm:text-3xl md:text-6xl font-bold drop-shadow-lg mb-3">
-              We Work for an Inclusive Future
+              {t("weWorkPage.hero.title")}
             </h1>
             <p className="  mt-4 text-sm sm:text-base md:text-2xl drop-shadow-md max-w-4xl ">
-              Our programs empower children and youth with intellectual
-              disabilities to reach their full potential through tailored
-              education, vocational training, inclusive community building, and
-              advocacy for lasting change.
+              {t("weWorkPage.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -88,7 +87,7 @@ const Page = () => {
           data-aos="fade-left"
         >
           <h3 className=" sm:text-2xl max-sm:text-2xl md:text-4xl  text-[#623D3C] Acumin Condensed Black font-extrabold mb-5">
-            Learn More About Our Programs
+            {t("weWorkPage.section1.title")}
           </h3>
 
           <div className=" flex flex-wrap justify-center gap-4 mt-6">
@@ -115,57 +114,33 @@ const Page = () => {
           <div className="md:flex md:gap-8 items-center mb-8 ">
             <div className="md:w-1/2">
               <h2 className=" md:text-4xl max-sm:text-2xl font-bold mb-4 text-[#623D3C] Acumin Condensed Black">
-                Education Programs
+                {t("weWorkPage.section2.title")}
               </h2>
               <p className="mb-4 Helvetica Neue">
-                Empowering Bright Minds to Embrace Life’s Opportunities. At The
-                Rabbit School, we believe education should adapt to the
-                child—not the other way around. We support children and youth
-                with intellectual disabilities from early childhood through
-                adolescence. Specialized classrooms in public schools across
-                Cambodia help students aged 5–16 develop essential motor,
-                self-help, cognitive, and social skills.
+                {t("weWorkPage.section2.education.title")}
               </p>
               <ul className="list-disc ml-5 mb-4 Helvetica Neue">
                 <div className="mb-4">
                   <h3 className=" text-black font-bold  text-xl max-sm:text-[18px]">
-                    Readiness Classes (Ages 4–6)
+                   {t("weWorkPage.section2.education.text")}
                   </h3>
-                  <li>Self-help and independence skills</li>
-                  <li>Social and emotional development</li>
-                  <li> Preparation for inclusive or integrated classrooms</li>
+                  <p>{t("weWorkPage.section2.vocational.title")}</p>
                 </div>
                 <div className="mb-4">
                   <h2 className="text-xl text-black font-bold p-2max-sm:text-[18px] ">
-                    Two Learning Pathways (Ages 6–16)
+                    {t("weWorkPage.section2.vocational.text")}
                   </h2>
-                  <li>Adapted curriculum designed to each student’s level</li>
-                  <li>
-                    Access to support services like speech and occupational
-                    therapy
-                  </li>
-                  <li>
-                    Individual Education Plan (IEP) updated every 3 months
-                  </li>
+                  <p>{t("weWorkPage.section2.community.title")}</p>
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl text-black font-bold p-2 max-sm:text-[18px]">
-                    Individualized Education Plans
+                   {t("weWorkPage.section2.community.text")}
                   </h3>
-                  <li>Students with and without disabilities learn together</li>
-                  <li>Teachers receive ongoing support from our team</li>
-                  <li>
-                    Follow national curriculum with adapted teaching methods{" "}
-                  </li>
-                  <li>
-                    {" "}
-                    Focus on peer interaction, mutual respect, and inclusion
-                  </li>
+                  <p>{t("weWorkPage.section2.advocacy.title")}</p>
                 </div>
               </ul>
               <p className="Helvetica Neue">
-                Specialized classrooms and inclusive methods prepare students to
-                learn and develop social, cognitive, and life skills.
+                {t("weWorkPage.section2.advocacy.text")}
               </p>
             </div>
             <div
@@ -195,29 +170,15 @@ const Page = () => {
           <div className="md:flex md:gap-8 items-center mb-16 md:flex-row-reverse mx-auto">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl ">
-                Vocational Training & Job Placement
+               {t("weWorkPage.impact.title")}
               </h2>
               <p className="mb-4 Helvetica Neue">
-                Ages 16–25. Our vocational program follows special education
-                classes, teaching life-long skills that prepare youth for
-                independence and employment opportunities.
+                {t("weWorkPage.impact.text")}
               </p>
               <h4 className="text-xl  font-bold p-2 text-black max-sm:text-[18px] Helvetica Neue">
-                Skills Students Learn
+                {t("weWorkPage.text.title")}
               </h4>
-              <ul className="list-disc ml-5 mb-4 Helvetica Neue ">
-                <li>Cleaning and basic hygiene routines</li>
-                <li>Preparing tables and washing dishes</li>
-                <li>Gardening and outdoor maintenance</li>
-                <li>Following instructions and teamwork </li>
-                <li>Developing positive job attitudes and social behavior</li>
-                <li>Expressing themselves through music, sports, and games</li>
-              </ul>
-              <p className="Helvetica Neue">
-                Students currently produce handmade paper bags for Bodia, a
-                Cambodian wellness products business. We also collaborate with
-                external partners for job placements.
-              </p>
+             <p>{t("weWorkPage.text.items")}</p>
             </div>
             <div
               className="md:w-1/2 mt-6 md:mt-0  overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform
@@ -246,48 +207,23 @@ const Page = () => {
           <div className="md:flex md:gap-8 items-center mb-16">
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
-                Teacher Training
+                {t("weWorkPage.text1.title")}
               </h2>
               <h4 className="text-xl text-black font-bold p-2 max-sm:text-[20px] Helvetica Neue">
                 {" "}
-                Building Teacher Capacity for Inclusive Education
+                {t("weWorkPage.text1.items")}
               </h4>
               <p className="mb-4 Helvetica Neue">
-                Since 2010, Rabbit School has been training teachers to provide
-                inclusive, individualized education for children with
-                intellectual disabilities and autism. With initial support from
-                the University of London, our training focused on quality
-                teaching, child-friendly methods, and practical tools for
-                working with children with special needs.
+                {t("weWorkPage.text2.title")}
               </p>
               <h4 className="text-xl text-black font-bold p-2 Helvetica Neue">
-                What we Do:
+                {t("weWorkPage.text2.items")}
               </h4>
               <p>
-                Train teachers to assess students and develop{" "}
-                <b>Individual Education Plans (IEPs)</b> tailored to each
-                child’s abilities and needs.
+                {t("weWorkPage.text3.title")}
               </p>
               <ul className="list-disc ml-5 mb-4 Helvetica Neue">
-                <li>
-                  Organize <b>monthly teacher meetings</b> to reflect on
-                  challenges, share solutions, and improve communication with
-                  students.
-                </li>
-                <li>
-                  Offer ongoing training in <b>Phnom Penh and provinces</b>, not
-                  only for teachers, but also for school directors, education
-                  authorities, commune committees, and civil society.
-                </li>
-                <li>
-                  Collaborate with NGO partners and local experts to provide
-                  <b>continuous learning opportunities</b> for our staff
-                </li>
-                <li>
-                  Develop and distribute{" "}
-                  <b>special education curricula and manuals</b>
-                  for use by teachers and parents.
-                </li>
+               {t("weWorkPage.text3.items")}
               </ul>
             </div>
 
@@ -343,20 +279,12 @@ const Page = () => {
             </div>
             <div className="md:w-1/2  ">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
-                Making Paper Bags for Bodia
+                {t("weWorkPage.text4.title")}
               </h2>
               <p className="text-base  text-black Helvetica Neue">
-                Our students currently produce handmade paper bags for Bodia, a
-                business that sells 100% natural Cambodian wellness products.
-                This activity is well-suited for students with intellectual
-                disabilities, as each one can participate meaningfully in the
-                process—from folding and gluing to quality checks.
+                {t("weWorkPage.text4.items")}
               </p>
-              <p className="mt-2 text-base md:text-lg text-black Helvetica Neue">
-                Beyond this, we also collaborate with external partners to
-                facilitate job placements and support our students in taking
-                their first steps into the world of work.
-              </p>
+             
             </div>
           </div>
         </section>
@@ -365,7 +293,7 @@ const Page = () => {
           data-aos="fade-up"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-[#623D3C] max-sm:text-2xl Acumin Condensed Black">
-            Cambodia's First Speech Stimulators
+            {t("weWorkPage.text5.title")}
           </h2>
 
           <Image
@@ -377,26 +305,12 @@ const Page = () => {
           />
 
           <p className="text-base  text-black Helvetica Neue">
-            In 2025, Rabbit School opened its first-ever Speech Unit and Sensory
-            Lab at our Tuol Kork campus in Phnom Penh. This space offers
-            specialized support for children with autism and intellectual
-            disabilities who face challenges with communication. It creates a
-            safe, welcoming environment where children can explore their voice
-            and build the foundations for language and interaction. We are proud
-            to have trained Cambodia’s first 7 speech stimulators—teachers who
-            specialize in adapted communication strategies for children with
-            developmental disabilities. Guided by expert trainer Judy, the team
-            focuses on helping children move beyond distress, find joy in their
-            voice, and take the first steps toward speech.
+            {t("weWorkPage.text5.items")}
           </p>
         </div>
         <div className="md:m-10 sm:m-10 max-sm:m-10 md:p-10 mx-auto border-l-4 border-yellow-400 bg-yellow-50 py-10 rounded-lg shadow-md text-[#79A2C9]  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
           <h6 className="italic  md:text-2xl max-sm:px-5  font-bold 6">
-            “What autistic kids need is adapted speech stimulation,” explains
-            Judy. “First, we help them move beyond suffering. Then we gently
-            invite them to interact and find pleasure in their voice. With these
-            two things combined, speech always follows.” <br /> <br />— Judy,
-            Speech Therapist and Trainer of the Speech Stimulators
+            {t("weWorkPage.text6.title")}
           </h6>
         </div>
         <section
@@ -410,50 +324,51 @@ const Page = () => {
         >
           <div className="max-w-6xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-4 text-center">
-              Advocacy and Community Building
+              {t("weWorkPage.text6.items")}
             </h2>
 
             <p className="text-black  max-w-8xl  mb-12 ">
-              We work closely with local authorities and parents to integrate
-              Rabbit School’s programs into the public system. At the same time,
-              we work to break down the stigma around intellectual
-              disabilities—promoting understanding, inclusion, and lasting
-              change within communities. We are not just teaching children—we
-              are building a more inclusive society, one where everyone is
-              valued for who they are and the contributions they can make.
+               {t("weWorkPage.text7.title")}
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
-                <Image
-                  src="/images/sai.jpg"
-                  alt="Event Run with Sai"
-                  width={600}
-                  height={400}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4 text-center">
-                  <p className="font-semibold text-[#623D3C] Helvetica Neue">
-                    Event Run With Sai
-                  </p>
-                </div>
-              </div>
+<div className="grid md:grid-cols-2 gap-8 mb-12">
+  {/* Card 1 */}
+  <div className="bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="relative w-full h-64 rounded-xl overflow-hidden">
+      <Image
+        src="/images/sai.jpg"
+        alt="Event Run with Sai"
+        fill
+        className="object-cover"
+      />
+    </div>
+    <div className="p-4 text-center">
+      <p className="font-semibold text-[#623D3C] Helvetica Neue">
+        {t("weWorkPage.text7.items")}
+      </p>
+    </div>
+  </div>
 
-              <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg  transition-transform duration-300 ease-in-out hover:scale-105 hover:-translate-y-2">
-                <Image
-                  src="/images/mother.webp"
-                  alt="Parents’ Training"
-                  width={600}
-                  height={400}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="p-4 text-center">
-                  <p className="font-semibold text-[#623D3C] Helvetica Neue">
-                    Parents’ Training
-                  </p>
-                </div>
-              </div>
-            </div>
+  {/* Card 2 */}
+  <div className="bg-white rounded-xl shadow-md overflow-hidden">
+    <div className="relative w-full h-64 rounded-xl overflow-hidden">
+      <Image
+        src="/images/mother.webp"
+        alt="Parents’ Training"
+        fill
+        className="object-cover"
+      />
+    </div>
+    <div className="p-4 text-center">
+      <p className="font-semibold text-[#623D3C] Helvetica Neue">
+        {t("weWorkPage.text8.title")}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
           </div>
         </section>
         <div
@@ -461,7 +376,7 @@ const Page = () => {
           data-aos="fade-up"
         >
           <h3 className="text-2xl Helvetica Neue font-bold p-5">
-            Activities In School
+           {t("weWorkPage.text8.items")}
           </h3>
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex gap-6 pb-4 ">
@@ -490,7 +405,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <Footer />;
+      <Footer />
     </>
   );
 };

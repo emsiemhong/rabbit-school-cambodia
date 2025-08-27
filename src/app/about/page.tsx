@@ -193,7 +193,7 @@ const Page = () => {
                 <h3 className="text-lg font-bold text-[#623D3C] mb-4">
                   {t("ourStoryPage.whyCambodia.marginalized.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
                   {t("ourStoryPage.whyCambodia.marginalized.text")}
                 </p>
               </div>
@@ -201,7 +201,7 @@ const Page = () => {
                 <h3 className="text-lg font-bold text-[#623D3C] mt-6 mb-4">
                   {t("ourStoryPage.whyCambodia.poverty.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
                   {t("ourStoryPage.whyCambodia.poverty.text")}
                 </p>
               </div>
@@ -210,7 +210,7 @@ const Page = () => {
               <h3 className="text-lg font-bold text-[#623D3C] mb-4">
                 {t("ourStoryPage.whyCambodia.exist.title")}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
                 {t("ourStoryPage.whyCambodia.exist.text")}
               </p>
             </div>
