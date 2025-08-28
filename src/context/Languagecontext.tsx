@@ -17,6 +17,7 @@ interface LanguageContextProps {
   language: LangType;
   setLanguage: (lang: LangType) => void;
   t: (key: string) => string;
+  locale: string; 
 }
 
 const translations: Record<LangType, any> = { en, km };
@@ -49,7 +50,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, locale: language }}>
       {children}
     </LanguageContext.Provider>
   );

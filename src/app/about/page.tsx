@@ -9,9 +9,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { FaHandHoldingHeart } from "react-icons/fa";
-import "../globals.css";
+import { useLanguage } from "@/context/Languagecontext";
 
 const Page = () => {
+  const { t } = useLanguage();
   const [active, setActive] = useState<number | null>(null);
   useEffect(() => {
     AOS.init({
@@ -40,33 +41,29 @@ const Page = () => {
           data-aos="fade-up"
         >
           <h1 className="text-white  md:text-7xl sm:text-4xl max-sm:text-2xl">
-            Our Story:
+            {t("ourStoryPage.hero.title")}
           </h1>
           <h2 className="   sm:text-4xl md:text-5xl font-bold drop-shadow-lg shadow-black leading-snug">
-            The Belief That Started It All — Every Child Deserves Opportunity
+            {t("ourStoryPage.hero.subtitle")}
           </h2>
         </div>
       </section>
 
       {/* --- SECTION 1 --- */}
-      <div className="bg-white p-6 md:p-12 drop-shadow-lg shadow-black">
+      <div
+        className="bg-white p-6 md:p-12 drop-shadow-lg shadow-black"
+        id="story"
+      >
         <div
           className="flex flex-col md:flex-row-reverse md:gap-8 items-center md:items-start "
           data-aos="fade-left"
         >
           <div className="md:w-1/2 ">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#623D3C]">
-              A Belief that Started it All
+              {t("ourStoryPage.section1.title")}
             </h2>
             <p className="mb-4 flex text-justify md:mt-10">
-              The Rabbit School is a Cambodian NGO that began in May 1997 as a
-              pilot project to provide education to children with special needs
-              at the Nutrition Centre— a government-run orphanage in Phnom Penh
-              originally established for children aged 0–6 who had been
-              abandoned or lost their families during the Khmer Rouge regime
-              (1975–1979). In offering education to this extremely disadvantaged
-              group, The Rabbit School laid the foundation for Cambodia’s first
-              formal educational programs for children with disabilities.
+              {t("ourStoryPage.section1.text")}
             </p>
           </div>
           <div className="md:w-1/2 mt-6 md:mt-0 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 active:scale-95">
@@ -98,17 +95,10 @@ const Page = () => {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#623D3C]">
-              Growing with the Community
+              {t("ourStoryPage.section2.title")}
             </h2>
             <p className="mb-4 flex text-justify md:mt-10">
-              What started as a small initiative within an orphanage has grown
-              into a nationally recognized organization dedicated to inclusive
-              education. In 2008, we opened our first integrated classroom
-              within Toul Kork Primary School and launched a Vocational Training
-              Centre in Phnom Penh. These milestones reflected our expanding
-              commitment—not only to education but also to life skills and
-              future employment for children with intellectual disabilities and
-              autism.
+              {t("ourStoryPage.section2.text")}
             </p>
           </div>
         </div>
@@ -122,14 +112,10 @@ const Page = () => {
         >
           <div className="md:w-1/2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#623D3C]">
-              Reaching Further
+              {t("ourStoryPage.section3.title")}
             </h2>
             <p className="mb-4 flex text-justify md:mt-10">
-              Since 2014, The Rabbit School has expanded its impact to other
-              parts of the country, now operating education projects in Kandal,
-              Kampong Speu, and Siem Reap provinces. Across all our locations,
-              we offer tailored learning programs that respect each child’s
-              pace, strengths, and unique potential.
+              {t("ourStoryPage.section3.text")}
             </p>
           </div>
           <div className="md:w-1/2 mt-6 md:mt-0 overflow-hidden rounded-lg transition-transform duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 active:scale-95">
@@ -161,13 +147,10 @@ const Page = () => {
           </div>
           <div className="md:w-1/2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-[#623D3C]">
-              Our Ongoing Commitment
+              {t("ourStoryPage.section4.title")}
             </h2>
             <p className="mb-4 flex text-justify md:mt-10">
-              Today, The Rabbit School stands as a beacon of inclusive education
-              in Cambodia. As we continue to evolve, we remain committed to
-              expanding access, improving quality, and building a sustainable
-              future for our programs.
+              {t("ourStoryPage.section4.text")}
             </p>
           </div>
         </div>
@@ -189,11 +172,10 @@ const Page = () => {
 
         <div className=" md:max-w-1/1  relative inset-0 flex flex-col justify-center   md:px-12   font-extrabold  z-10 text-center text-white px-4">
           <h1 className="text-2xl md:text-4xl font-bold">
-            What Drives Us: A Belief in Every Child
+            {t("ourStoryPage.banner.title")}
           </h1>
           <p className="mt-4 text-sm md:text-lg">
-            Every child deserves a chance to reach their full potential—no
-            matter their abilities or background.
+            {t("ourStoryPage.banner.text")}
           </p>
         </div>
       </section>
@@ -201,7 +183,7 @@ const Page = () => {
       {/* --- WHY CAMBODIA --- */}
       <section className="max-w-8xl mx-auto py-10 px-6" data-aos="fade-right">
         <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-10 px-10 sm:px-2 max-sm:px-2">
-          Why Cambodia
+          {t("ourStoryPage.whyCambodia.title")}
         </h2>
 
         <div className="grid  gap-8  text-justify">
@@ -209,43 +191,27 @@ const Page = () => {
             <div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[#623D3C] mb-4">
-                  A Deeply Marginalized Group
+                  {t("ourStoryPage.whyCambodia.marginalized.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  In Cambodia, children with intellectual disabilities remain
-                  among the most excluded. Inclusive education is still not a
-                  national priority, and most schools are not equipped to meet
-                  their needs. Traditional beliefs and misinformation further
-                  deepen the stigma— many still see disabilities as a punishment
-                  for actions in a past life. These societal attitudes leave
-                  children isolated, misunderstood, and left behind.
+                <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
+                  {t("ourStoryPage.whyCambodia.marginalized.text")}
                 </p>
               </div>
               <div className="p-5">
                 <h3 className="text-lg font-bold text-[#623D3C] mt-6 mb-4">
-                  Barriers Made Worse by Poverty
+                  {t("ourStoryPage.whyCambodia.poverty.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Poverty intensifies every challenge. Many families cannot
-                  afford education, therapy, or care for their child with
-                  special needs. Without support, these children often remain at
-                  home—hidden from society, without access to learning or a
-                  hopeful future.
+                <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
+                  {t("ourStoryPage.whyCambodia.poverty.text")}
                 </p>
               </div>
             </div>
             <div className="bg-white  p-5">
               <h3 className="text-lg font-bold text-[#623D3C] mb-4">
-                Why We Exist
+                {t("ourStoryPage.whyCambodia.exist.title")}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
-                The Rabbit School is here to change that. Through our education
-                programs, vocational training, and family support initiatives,
-                we help children with intellectual disabilities overcome the
-                many barriers they face—discrimination, lack of adapted
-                education, health access, and future employment. We offer more
-                than a classroom. We offer inclusion, hope, and pathways to
-                self-reliance and independence.
+              <p className="text-gray-600 leading-relaxed md:w-125 max-sm:w-80 sm:w-100">
+                {t("ourStoryPage.whyCambodia.exist.text")}
               </p>
             </div>
           </div>
@@ -255,7 +221,7 @@ const Page = () => {
       {/* --- OUR CORE DRIVERS --- */}
       <section className="max-w-7xl mx-auto px-15 " data-aos="fade-left">
         <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-10">
-          Our Core Drivers
+          {t("ourStoryPage.coreDrivers.title")}
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -269,13 +235,10 @@ const Page = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold text-black max-sm:text-xl sm:text-xl  ">
-                Empowerment
+                {t("ourStoryPage.coreDrivers.empowerment1.title")}
               </h3>
             </div>
-            <p>
-              Supporting children and families to build confidence,
-              independence, and a sense of worth.
-            </p>
+            <p>{t("ourStoryPage.coreDrivers.empowerment1.text")}</p>
           </div>
 
           <div className="bg-[#8BAEA7] text-white rounded-lg p-6 shadow-md flex flex-col items-center">
@@ -288,13 +251,10 @@ const Page = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold text-black max-sm:text-xl sm:text-xl">
-                Empowerment
+                {t("ourStoryPage.coreDrivers.empowerment2.title")}
               </h3>
             </div>
-            <p>
-              Supporting children and families to build confidence,
-              independence, and a sense of worth.
-            </p>
+            <p>{t("ourStoryPage.coreDrivers.empowerment2.text")}</p>
           </div>
 
           <div className="bg-[#8BAEA7] text-white rounded-lg p-6 shadow-md flex flex-col items-center">
@@ -307,13 +267,10 @@ const Page = () => {
                 className="mb-4"
               />
               <h3 className="text-2xl font-bold text-black max-sm:text-xl sm:text-xl">
-                Empowerment
+                {t("ourStoryPage.coreDrivers.empowerment3.title")}
               </h3>
             </div>
-            <p>
-              Supporting children and families to build confidence,
-              independence, and a sense of worth.
-            </p>
+            <p>{t("ourStoryPage.coreDrivers.empowerment3.text")}</p>
           </div>
         </div>
       </section>
@@ -326,7 +283,7 @@ const Page = () => {
       >
         <div className="mt-20 ">
           <h3 className="text-4xl text-[#623D3C] sm:text-2xl max-sm:text-2xl font-bold p-5 ">
-            Picture Of Students
+            {t("ourStoryPage.pictures.title")}
           </h3>
           <div className="overflow-x-auto  scrollbar-hide ">
             <div className="flex gap-6 pb-4 scrollbar-hide">
@@ -371,11 +328,10 @@ const Page = () => {
         data-aos="fade-right"
       >
         <h2 className="text-2xl sm:text-xl md:text-4xl font-bold text-[#623D3C]">
-          Aligned with the UN SDG Goals
+          {t("ourStoryPage.sdg.title")}
         </h2>
         <p className="mt-4 text-black text-sm  max-sm:text-justify">
-          Our work supports inclusive and equitable quality education, decent
-          work, and reduced inequalities.
+          {t("ourStoryPage.sdg.text")}
         </p>
 
         <div className="grid grid-cols-1 max-sm:grid-cols-3 sm:grid-cols-3 md:grid-cols-3 gap-2 mt-8  max-sm:gap-1">
@@ -411,7 +367,7 @@ const Page = () => {
             className="flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-4 py-2 m-4 rounded-full transition"
           >
             <FaHandHoldingHeart />
-            <span>donate</span>
+            <span> {t("ourStoryPage.sdg.donate")}</span>
           </Link>
         </div>
       </section>

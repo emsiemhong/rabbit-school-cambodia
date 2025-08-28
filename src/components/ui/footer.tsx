@@ -61,7 +61,7 @@ export default function Footer() {
               <h3 className="font-semibold mb-3 text-gray-900">About Us</h3>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li>
-                  <Link href="/about">Our Story</Link>
+                  <Link href="/about#story">Our Story</Link>
                 </li>
                 <li>
                   <Link href="/about">Where We Work</Link>
@@ -80,10 +80,10 @@ export default function Footer() {
                   <Link href="#">RSOs Corner</Link>
                 </li>
                 <li>
-                  <Link href="/we-work#gallery">Photo Essays</Link>
+                  <Link href="/about#gallery">Photo Essays</Link>
                 </li>
                 <li>
-                  <Link href="/about#making-paper">Videos</Link>
+                  <Link href="/we-work#making-paper">Videos</Link>
                 </li>
               </ul>
             </div>
