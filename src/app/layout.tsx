@@ -1,78 +1,56 @@
-// import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
-// import "./globals.css";
-// // import { cn } from "@/lib/utils";
+import type { Metadata, Viewport } from "next"
 
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <head>
-//        <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bebas+Neue&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet"/>
-//         <link
-//           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-//           rel="stylesheet"
-//         />
-//         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet"/>
-//       </head>
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
-
+import Footer from "@/components/ui/footer";
+import { NextIntlClientProvider } from 'next-intl';
 
 import localFont from "next/font/local";
 import "./globals.css";
-
+import Header from "@/components/ui/header";
 
 const bebasNeue = localFont({
-  src: "../../public/fonts/BebasNeue-Regular.ttf",
+  src: "../app/fonts/BebasNeue-Regular.ttf",
   variable: "--font-bebas",
 });
 
 const arial = localFont({
-  src: "../../public//fonts/Arial.ttf",
+  src: "../app/fonts/Arial.ttf",
   variable: "--font-arial",
 });
 
-import { cn } from "@/lib/utils";
-import { LanguageProvider } from "@/context/Languagecontext";
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-
 const playfair = localFont({
-  src: "../../public/fonts/PlayfairDisplay-Italic.ttf",
+  src: "../app/fonts/PlayfairDisplay-Italic.ttf",
   variable: "--font-playfair",
 });
 
-
-export const metadata = {
-  title: "My App",
-  description: "Using local fonts",
-
-
-
-
+export const metadata: Metadata = {
+  title: "RSO - The Rabbit School",
+  description: `The Rabbit School is a Cambodian NGO that began in May 1997 as a pilot project to provide education
+  to children with special needs at the Nutrition Centre— a government- run orphanage in Phnom Penh originally established for
+  children aged 0-6 who had been abandoned or lost their families during the Khmer Rouge regime(1975-1979).In offering education
+  to this extremely disadvantaged group, The Rabbit School laid the foundation for Cambodia's first formal educational programs for
+  children with disabilities.`
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
+
+export default async function LocaleLayout({ children }: {children: React.ReactNode}) {
+  // Ensure that the incoming `locale` is valid
+
   return (
-    <html
-      lang="en"
-      className={`${bebasNeue.variable} ${arial.variable} ${playfair.variable}`}
-    >
-      <body className="antialiasedd">
-        <LanguageProvider>{children}</LanguageProvider>
+    <html lang="en">
+      <body className={`${bebasNeue.variable} ${arial.variable} ${playfair.variable} antialiased`}>
+        <NextIntlClientProvider>
+          <div className="flex flex-col min-h-screen bg-gray-50">
+            <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+            <Footer />
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
