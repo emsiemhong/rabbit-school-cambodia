@@ -2,13 +2,11 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/ui/navbar";
-import Footer from "@/components/ui/footer";
 import Image from "next/image";
 import Image2 from "../../../public/picture/Links/contact.png";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
-import { useLanguage } from "@/context/Languagecontext";
+import { useTranslations } from "next-intl";
 
 type FormData = {
   name: string;
@@ -17,7 +15,7 @@ type FormData = {
 };
 
 const ContactSection: React.FC = () => {
-  const { t } = useLanguage();
+  const t = useTranslations();
   const {
     register,
     handleSubmit,
@@ -42,8 +40,6 @@ const ContactSection: React.FC = () => {
 
   return (
     <>
-      <Navbar />
-
       {/* Section 1 - Info + Image */}
       <section className="w-full px-4 md:px-8 lg:px-16 py-12 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -212,8 +208,6 @@ const ContactSection: React.FC = () => {
           </div>
         </div>
       </motion.section>
-
-      <Footer />
     </>
   );
 };

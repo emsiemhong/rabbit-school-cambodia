@@ -2,9 +2,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react"; // icons
-import { FaHandHoldingHeart } from "react-icons/fa";
+import DonationLink from "./donation-link";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+
+  const t = useTranslations();
+
   return (
     <footer className="bg-gray-200 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
@@ -20,15 +24,7 @@ export default function Footer() {
               className="mb-6 h-auto w-auto"
               priority
             />
-           <div className="w-30">
-            <Link
-              href="/donate"
-              className="hidden text-center md:flex items-center space-x-2 bg-orange-400 hover:bg-orange-500 text-white font-medium px-5 py-2 rounded-full transition"
-            >
-              <FaHandHoldingHeart />
-              <span>Donate</span>
-            </Link>
-          </div>
+            <DonationLink text={t('navbar.donate')} />
           </div>
 
           {/* Right Column - Footer Links */}
@@ -110,7 +106,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="text-sm flex items-center gap-3 mb-3">
-                
+
                 <Mail className="w-5 h-5 text-gray-600" />
                 <p>
                   <a

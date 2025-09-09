@@ -3,18 +3,14 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import Navbar from "@/components/ui/navbar";
-import Footer from "@/components/ui/footer";
 import { motion } from "framer-motion";
-import { useLanguage } from "@/context/Languagecontext";
+import { useTranslations } from "next-intl";
 
 const GetInvolvedPage = () => {
-  const { t } = useLanguage();
+  const t = useTranslations();
 
   return (
     <>
-      <Navbar />
-
       <div className="font-sans">
         {/* Intro */}
         <motion.section
@@ -96,18 +92,13 @@ const GetInvolvedPage = () => {
                 >
                   {card.button}
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black transition-all duration-300 group-hover:w-23"></span>
-                  className=" w-25   transition hover:text-red-500 font-semibold "
-                
-                  {card.button}
-
+                  {/* className="w-25   transition hover:text-red-500 font-semibold " */}
                 </Link>
               </motion.div>
             ))}
           </div>
         </motion.section>
       </div>
-
-      <Footer />
     </>
   );
 };

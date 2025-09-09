@@ -5,17 +5,17 @@
     "button": "READ MORE"
   },
   "story": {
-    "title": "Our Story",
+    "title": "OUR STORY",
     "description": "The Rabbit School was founded in Phnom Penh in the early 1990s with a bold vision: to ensure that children with intellectual disabilities and autism are given the same right to learn, grow, and thrive as any other child.",
     "button": "READ MORE"
   },
   "howWeWork": {
-    "title": "How We Work",
+    "title": "HOW WE WORK",
     "description": "Our programs empower children and youth with intellectual disabilities to reach their full potential through tailored education, vocational training, inclusive community building, and advocacy for lasting change.",
     "button": "READ MORE"
   },
   "impact": {
-    "title": "Our Impact and Reach",
+    "title": "OUR IMPACT AND REACH",
     "description": "Since 1997, Rabbit School has been transforming the lives of children and youth with intellectual disabilities and autism—bringing them hope, learning, and a sense of belonging.",
     "stats": {
       "beneficiaries": "Have benefited from our education programs since 2013",
@@ -25,21 +25,21 @@
     }
   },
   "partners": {
-    "title": "Our Partners and Donors",
+    "title": "OUR PARTNERS AND DONORS",
     "description": "Working together with our corporate partners, we make a far bigger impact than we could by acting alone. Together we can make real change happen at scale."
   },
   "donation": {
-    "title": "Where our money goes",
+    "title": "WHERE YOUR MONEY GOES",
     "description": "Your donation will help us continue to deliver critical support to the community and life transforming education opportunities for the most vulnerable. All donations are processed via our secure online payment portal.",
     "button": "Donate"
   },
   "getInvolved": {
-    "title": "Get Involved",
+    "title": "GET INVOLVED",
     "description": "There are many ways to support Rabbit School and help transform the lives of children and youth with intellectual disabilities and autism in Cambodia. Choose the path that speaks to you—and become the reason a child can grow up with dignity, opportunity, and self-reliance.",
     "button": "READ MORE"
   },
   "newsletter": {
-    "title": "Receive the Happenings",
+    "title": "RECEIVE THE HAPPENINGS",
     "description": "Subscribe to Our Newsletter for Updates.",
     "button": "SUBSCRIBE"
   },
@@ -55,27 +55,27 @@
 
   "ourStoryPage": {
     "hero": {
-      "title": "Our Story:",
+      "title": "OUR STORY",
       "subtitle": "The Belief That Started It All — Every Child Deserves Opportunity"
     },
     "section1": {
-      "title": "A Belief that Started it All",
-      "text": "The Rabbit School is a Cambodian NGO that began in May 1997 as a pilot project to provide  education to children with special needs at the Nutrition Centre— a government-run orphanage  in Phnom Penh originally established for children aged 0–6 who had been abandoned or lost  their families during the Khmer Rouge regime (1975–1979). In offering education to this  extremely disadvantaged group, The Rabbit School laid the foundation for Cambodia’s first  formal educational programs for children with disabilities."
+      "title": "A BELIEF THAT STARTED IT ALL",
+      "text": "The Rabbit School is a Cambodian NGO that began in May 1997 as a pilot project to provide  education to children with special needs at the Nutrition Centre— a government-run orphanage  in Phnom Penh originally established for children aged 0-6 who had been abandoned or lost  their families during the Khmer Rouge regime (1975-1979). In offering education to this  extremely disadvantaged group, The Rabbit School laid the foundation for Cambodia's first  formal educational programs for children with disabilities."
     },
     "section2": {
-      "title": "Growing with the Community",
+      "title": "GROWING WITH THE COMMUNITY",
       "text": "What started as a small initiative within an orphanage has grown into a nationally recognized organization dedicated to inclusive education. In 2008, we opened our first integrated classroom within Toul Kork Primary School and launched a Vocational Training Centre in Phnom Penh. These milestones reflected our expanding commitment—not only to education but also to life skills and future employment for children with intellectual disabilities and autism."
     },
     "section3": {
-      "title": "Reaching Further",
-      "text": "Since 2014, The Rabbit School has expanded its impact to other parts of the country, now operating education projects in Kandal, Kampong Speu, and Siem Reap provinces. Across all our locations, we offer tailored learning programs that respect each child’s pace, strengths, and unique potential."
+      "title": "REACHING FURTHER",
+      "text": "Since 2014, The Rabbit School has expanded its impact to other parts of the country, now operating education projects in Kandal, Kampong Speu, and Siem Reap provinces. Across all our locations, we offer tailored learning programs that respect each child's pace, strengths, and unique potential."
     },
     "section4": {
-      "title": "Our Ongoing Commitment",
+      "title": "OUR ONGOING COMMITMENT",
       "text": "Today, The Rabbit School stands as a beacon of inclusive education in Cambodia. As we continue to evolve, we remain committed to expanding access, improving quality, and building a sustainable future for our programs."
     },
     "banner": {
-      "title": "What Drives Us: A Belief in Every Child",
+      "title": "WHAT DRIVES US: A BELIEF IN EVERY CHILD",
       "text": "Every child deserves a chance to reach their full potential—no matter their abilities or background."
     },
     "whyCambodia": {
@@ -108,9 +108,9 @@
         "text": "Creating and adapting tools, methods, and models that respond to each child'sunique needs and potential."
       }
     },
-    "pictures": { "title": "Picture Of Students" },
+    "pictures": { "title": "PICTURE OF STUDENTS" },
     "sdg": {
-      "title": "Aligned with the UN SDG Goals",
+      "title": "ALIGNED WITH THE UN SDG GOALS",
       "text": "Our work supports inclusive and equitable quality education, decent work, and reduced inequalities.",
       "donate": "donate"
     }
@@ -175,7 +175,7 @@
       "intro": "If you would like to contribute with resources, these are things that are needed most:",
       "items": [
         "School materials such as books, pencils, DVDs (player) and educational games",
-        "Children’s books in Khmer",
+        "Children's books in Khmer",
         "Physiotherapy special devices and toys"
       ]
     },
@@ -193,71 +193,69 @@
   "weWorkPage": {
     "hero": {
       "title": "How We Work",
-      "subtitle": "Our programs empower children and youth with intellectual disabilities to reach their full potential through tailored education, vocational training, inclusive community building, and advocacy for lasting change."
+      "desc": "Our programs empower children and youth with intellectual disabilities to reach their full potential through tailored education, vocational training, inclusive community building, and advocacy for lasting change."
     },
-    "section1": {
-      "title": "Learn More About Our Programs",
-      "text": "Our programs empower children and youth with intellectual disabilities to reach their full potential through tailored education, vocational training, inclusive community building, and advocacy for lasting change."
+    "nav": {
+      "title": "LEARN MORE ABOUT OUR PROGRAMS",
+      "education": "Education Programs",
+      "vocational": "Vocational Training & Job Placement",
+      "teacher": "Teacher Training",
+      "advocacy": "Advocacy And Community Building"
     },
-    "section2": {
-      "title": "Education Programs",
+    "programs": {
       "education": {
-        "title": "Empowering Bright Minds to Embrace Life’s Opportunities. At The Rabbit School, we believe education should adapt to the child—not the other way around. We support children and youth with intellectual disabilities from early childhood through adolescence. Specialized classrooms in public schools across Cambodia help students aged 5–16 develop essential motor,self-help, cognitive, and social skills.",
-        "text": "Readiness Classes (Ages 4–6)"
+        "title": "EDUCATION PROGRAMS",
+        "desc": "Empowering Bright Minds to Embrace Life's Opportunities. At The Rabbit School, we believe education should adapt to the child—not the other way around. We support children and youth with intellectual disabilities from early childhood through adolescence. Specialized classrooms in public schools across Cambodia help students aged 5-16 develop essential motor,self-help, cognitive, and social skills.",
+        "section1": {
+          "title": "Readiness Classes (Ages 4-6)",
+          "desc": "Self-help and independence skills Social and emotional development Preparation for inclusive or integrated classrooms"
+        },
+        "section2": {
+          "title": "Two Learning Pathways (Ages 6-16)",
+          "desc": "Adapted curriculum designed to each student's level Access to support services like speech and occupational therapy Individual Education Plan (IEP) updated every 3 months"
+        },
+        "section3": {
+          "title": "Individualized Education Plans",
+          "desc": "Students with and without disabilities learn together Teachers receive ongoing support from our team Follow national curriculum with adapted teaching methods Focus on peer interaction, mutual respect, and inclusion. Specialized classrooms and inclusive methods prepare students to learn and develop social, cognitive, and life skills."
+        }
       },
       "vocational": {
-        "title": "Self-help and independence skills Social and emotional development Preparation for inclusive or integrated classrooms",
-        "text": "Two Learning Pathways (Ages 6–16)"
+        "title": "VOCATIONAL TRAINING & JOB PLACEMENT",
+        "desc": "Ages 16-25. Our vocational program follows special education classes, teaching life-long skills that prepare youth for independence and employment opportunities.",
+        "section1": {
+          "title": "Skills Students Learn",
+          "desc": "Cleaning and basic hygiene routines Preparing tables and washing dishes Gardening and outdoor maintenance Following instructions and teamwork Developing positive job attitudes and social behavior Expressing themselves through music, sports, and games Students currently produce handmade paper bags for Bodia, a Cambodian wellness products business. We also collaborate with external partners for job placements."
+        }
       },
-      "community": {
-        "title": "Adapted curriculum designed to each student’s level Access to support services like speech and occupational therapy Individual Education Plan (IEP) updated every 3 months",
-        "text": "Individualized Education Plans"
+      "teacher": {
+        "title": "TEACHER TRAINING",
+        "section1": {
+          "title": "Building Teacher Capacity for Inclusive Education",
+          "desc": "Since 2010, Rabbit School has been training teachers to provide inclusive, individualized education for children with intellectual disabilities and autism. With initial support from the University of London, our training focused on quality teaching, child-friendly methods, and practical tools for working with children with special needs."
+        },
+        "section2": {
+          "title": "What we Do:",
+          "desc": "Train teachers to assess students and develop Individual Education Plans (IEPs) tailored to each child's abilities and needs. Organize monthly teacher meetings to reflect on challenges, share solutions, and improve communication with students.Offer ongoing training in Phnom Penh and provinces, not only for teachers, but also for school directors, education authorities, commune committees, and civil society.Collaborate with NGO partners and local experts to providecontinuous learning opportunities for our staff Develop and distribute special education curricula and manualsfor use by teachers and parents."
+        }
       },
-      "advocacy": {
-        "title": "Students with and without disabilities learn together Teachers receive ongoing support from our team Follow national curriculum with adapted teaching methods Focus on peer interaction, mutual respect, and inclusion",
-        "text": "Specialized classrooms and inclusive methods prepare students to learn and develop social, cognitive, and life skills."
+      "making-paper-bags": {
+        "title": "MAKING PAPER BAGS FOR BODIA",
+        "desc": "Our students currently produce handmade paper bags for Bodia, a business that sells 100% natural Cambodian wellness products. This activity is well-suited for students with intellectual disabilities, as each one can participate meaningfully in the process—from folding and gluing to quality checks.Beyond this, we also collaborate with external partners to facilitate job placements and support our students in taking their first steps into the world of work."
       }
     },
-    "impact": {
-      "title": "Vocational Training & Job Placement",
-      "text": "Ages 16–25. Our vocational program follows special education classes, teaching life-long skills that prepare youth for independence and employment opportunities."
+    "stimulator": {
+      "title": "CAMBODIA'S FIRST SPEECH STIMULATOR",
+      "desc": "In 2025, Rabbit School opened its first-ever Speech Unit and Sensory Lab at our Tuol Kork campus in Phnom Penh. This space offers specialized support for children with autism and intellectual disabilities who face challenges with communication. It creates a safe, welcoming environment where children can explore their voice and build the foundations for language and interaction. We are proud to have trained Cambodia's first 7 speech stimulators—teachers who specialize in adapted communication strategies for children with developmental disabilities. Guided by expert trainer Judy, the team focuses on helping children move beyond distress, find joy in their voice, and take the first steps toward speech.",
+      "quote": "“What autistic kids need is adapted speech stimulation,” explains Judy. “First, we help them move beyond suffering. Then we gently invite them to interact and find pleasure in their voice. With these two things combined, speech always follows.” Judy, Speech Therapist and Trainer of the Speech Stimulator"
     },
-    "text": {
-      "title": "Skills Students Learn",
-      "items": "Cleaning and basic hygiene routines Preparing tables and washing dishes Gardening and outdoor maintenance Following instructions and teamwork Developing positive job attitudes and social behavior Expressing themselves through music, sports, and games Students currently produce handmade paper bags for Bodia, a Cambodian wellness products business. We also collaborate with external partners for job placements."
+    "sai-event": {
+      "title": "ADVOCACY AND COMMUNITY BUILDING",
+      "desc": "We work closely with local authorities and parents to integrate Rabbit School's programs into the public system. At the same time, we work to break down the stigma around intellectual disabilities—promoting understanding, inclusion, and lasting change within communities. We are not just teaching children—we are building a more inclusive society, one where everyone is valued for who they are and the contributions they can make.",
+      "caption1": "Event Run With Sai",
+      "caption2": "Parents' Training"
     },
-     "text1": {
-      "title": "Teacher Training",
-      "items": "Building Teacher Capacity for Inclusive Education"
-    },
-    "text2": {
-      "title": "Since 2010, Rabbit School has been training teachers to provide inclusive, individualized education for children with intellectual disabilities and autism. With initial support from the University of London, our training focused on quality teaching, child-friendly methods, and practical tools for working with children with special needs.",
-      "items": "What we Do:"
-    },
-    "text3": {
-      "title": "Train teachers to assess students and develop Individual Education Plans (IEPs) tailored to each child’s abilities and needs.",
-      "items": "Organize monthly teacher meetings to reflect on challenges, share solutions, and improve communication with students.Offer ongoing training in Phnom Penh and provinces, not only for teachers, but also for school directors, education authorities, commune committees, and civil society.Collaborate with NGO partners and local experts to providecontinuous learning opportunities for our staff Develop and distribute special education curricula and manualsfor use by teachers and parents."
-    },
-    "text4": {
-      "title": "Making Paper Bags for Bodia",
-      "items": "Our students currently produce handmade paper bags for Bodia, a business that sells 100% natural Cambodian wellness products. This activity is well-suited for students with intellectual disabilities, as each one can participate meaningfully in the process—from folding and gluing to quality checks.Beyond this, we also collaborate with external partners to facilitate job placements and support our students in taking their first steps into the world of work."
-    },
-    "text5": {
-      "title": "Cambodia's First Speech Stimulators",
-      "items": "In 2025, Rabbit School opened its first-ever Speech Unit and Sensory Lab at our Tuol Kork campus in Phnom Penh. This space offers specialized support for children with autism and intellectual disabilities who face challenges with communication. It creates a safe, welcoming environment where children can explore their voice and build the foundations for language and interaction. We are proud to have trained Cambodia’s first 7 speech stimulators—teachers who specialize in adapted communication strategies for children with developmental disabilities. Guided by expert trainer Judy, the team focuses on helping children move beyond distress, find joy in their voice, and take the first steps toward speech."
-    },
-    "text6": {
-      "title": "“What autistic kids need is adapted speech stimulation,” explains Judy. “First, we help them move beyond suffering. Then we gently invite them to interact and find pleasure in their voice. With these two things combined, speech always follows.” Judy, Speech Therapist and Trainer of the Speech Stimulators",
-      "items": "Advocacy and Community Building"
-    },
-    "text7": {
-      "title": "We work closely with local authorities and parents to integrate Rabbit School’s programs into the public system. At the same time, we work to break down the stigma around intellectual disabilities—promoting understanding, inclusion, and lasting change within communities. We are not just teaching children—we are building a more inclusive society, one where everyone is valued for who they are and the contributions they can make.",
-      "items": "Event Run With Sai"
-    },
-    "text8": {
-      "title": "Parents’ Training",
-      "items": "Activities In School"
+    "school-activities": {
+      "title": "ACTIVITIES IN SCHOOL"
     }
   }
-  
 }
