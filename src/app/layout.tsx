@@ -23,7 +23,7 @@ const playfair = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "RSO - The Rabbit School",
+  title: "Rabbit School Organization",
   description: `The Rabbit School is a Cambodian NGO that began in May 1997 as a pilot project to provide education
   to children with special needs at the Nutrition Centre— a government- run orphanage in Phnom Penh originally established for
   children aged 0-6 who had been abandoned or lost their families during the Khmer Rouge regime(1975-1979).In offering education

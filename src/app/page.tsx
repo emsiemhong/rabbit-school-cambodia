@@ -32,12 +32,7 @@ import logos4 from "../../public/donors&partners/smart-logo.png";
 import logos5 from "../../public/donors&partners/ccf-logo.png";
 import logos6 from "../../public/donors&partners/epil-logo.jpg";
 import logos7 from "../../public/donors&partners/manulife-logo.png";
-
-// Types
-export interface ImpactData {
-  value: number;
-  description: string;
-}
+import { ImpactData } from "./types/impact";
 
 interface HeroSectionProps {
   imageSrc: import("next/image").StaticImageData;
@@ -383,7 +378,7 @@ export default function Home() {
 
                     <div className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
                       <CountUp
-                        end={item.value}
+                        end={item.total ? parseInt(item.total.replace("+", ""), 10) : 0}
                         duration={2.5}
                         separator=","
                         preserveValue
