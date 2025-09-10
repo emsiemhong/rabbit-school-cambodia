@@ -140,6 +140,10 @@
   },
 
   "contactSection": {
+    "hero": {
+      "title": "ទំនាក់ទំនង​មក​កាន់​យើង",
+      "subtitle": "យើងចង់ស្តាប់ពីអ្នក! មិនថាអ្នកមានសំណួរ មតិយោបល់ ឬគ្រាន់តែចង់សួរសុខទុក្ខ សូមអញ្ជើញទាក់ទងមកយើង។"
+    },
     "section1": {
       "title": "ទំនាក់ទំនងមកកាន់យើង",
       "description": "មានសំនួរអ្វីមែនទេ? យើងចង់ស្តាប់ពីអ្នក!",
@@ -153,16 +157,29 @@
     },
     "section2": {
       "title": "សំណួរទូទៅ",
+      "subtitle":" សូមទាក់ទងមកយើងតាមរយៈបែបបទខាងក្រោម។",
       "nameLabel": "ឈ្មោះរបស់អ្នក",
+      "namePlaceholder": "បញ្ចូលឈ្មោះរបស់អ្នក",
       "nameError": "ត្រូវការ ឈ្មោះ",
       "emailLabel": "អ៊ីមែលរបស់អ្នក",
+      "emailPlaceholder": "បញ្ចូលអ៊ីមែលរបស់អ្នក",
       "emailErrorRequired": "ត្រូវការ អ៊ីមែល",
       "emailErrorPattern": "សូមបញ្ចូលអ៊ីមែលត្រឹមត្រូវ",
+      "subjectLabel": "ប្រធានបទ",
+      "subjectPlaceholder": "បញ្ចូលប្រធានបទ",
       "messageLabel": "សាររបស់អ្នក",
+      "messagePlaceholder": "បញ្ចូលសាររបស់អ្នក",
       "messageError": "ត្រូវការ សារ",
       "sendButton": "ផ្ញើ",
       "sendingButton": "កំពុងផ្ញើ...",
-      "successMessage": "✅ អរគុណ! សាររបស់អ្នកបានផ្ញើជាស្ថាពរ។"
+      "successMessage": "✅ អរគុណ! សាររបស់អ្នកបានផ្ញើជាស្ថាពរ។",
+      "nameMinLength": "ឈ្មោះត្រូវមានយ៉ាងហោចណាស់ 2 តួអក្សរ",
+      "messageMinLength": "សារត្រូវមានយ៉ាងហោចណាស់ 10 តួអក្សរ"
+    },
+    "location": {
+      "title": "ទីតាំងរបស់យើង",
+      "address": "សាលាបឋមសិក្សាទួលគោក, ភ្នំពេញ",
+      "mapLink": "មើលលើផែនទី Google"
     }
   },
   "donatePage": {

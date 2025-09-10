@@ -87,7 +87,7 @@ const HeroSection = ({ title, subtitle }: { title: string; subtitle: string }) =
       </motion.h1>
 
       <motion.h2
-        className="text-yellow-300 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg leading-snug"
+        className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg leading-snug"
         variants={slideInVariants}
         transition={{ delay: 0.2 }}
       >
@@ -129,7 +129,7 @@ const StorySection = ({
           variants={slideInVariants}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight">
             {title}
           </h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -183,7 +183,7 @@ const BannerSection = ({ title, text }: { title: string; text: string }) => (
       viewport={{ once: true }}
       variants={fadeInVariants}
     >
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
         {title}
       </h2>
       <p className="text-base md:text-lg lg:text-xl leading-relaxed">
@@ -241,7 +241,7 @@ const GallerySection = ({ title }: { title: string }) => {
       <section className="py-16 bg-gray-50" id="gallery">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.h3
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-8 text-center"
+            className="text-3xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-8 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -357,7 +357,7 @@ const SDGSection = ({ title, text, buttonText }: { title: string; text: string; 
         variants={staggerChildren}
       >
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-6"
+          className="text-3xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-6"
           variants={fadeInVariants}
         >
           {title}
@@ -394,7 +394,7 @@ const SDGSection = ({ title, text, buttonText }: { title: string; text: string; 
           ))}
         </motion.div>
 
-        <motion.div variants={fadeInVariants}>
+        <motion.div variants={fadeInVariants} className="display: inline-block">
           <DonationLink text={buttonText} />
         </motion.div>
       </motion.div>

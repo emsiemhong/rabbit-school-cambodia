@@ -312,9 +312,9 @@ const VideoPlayer = ({
       </motion.div>
 
       <motion.div className="lg:w-1/2 space-y-4" variants={slideInRight}>
-        <h3 className="text-2xl md:text-3xl font-bold text-amber-900">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900">
           {title}
-        </h3>
+        </h2>
         <p className="text-gray-700 text-base md:text-lg leading-relaxed">
           {description}
         </p>
@@ -349,16 +349,16 @@ const QuoteSection = ({ quote }: { quote: string }) => (
 const ActivityGallery = ({ title, images }: { title: string; images: ActivityImage[] }) => (
   <section className="py-16 bg-gray-50" aria-labelledby="gallery-title">
     <div className="max-w-7xl mx-auto px-4">
-      <motion.h3
+      <motion.h2
         id="gallery-title"
-        className="text-2xl md:text-3xl font-bold text-amber-900 mb-8"
+        className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeInVariants}
       >
         {title}
-      </motion.h3>
+      </motion.h2>
 
       <motion.div
         className="overflow-x-auto pb-4"

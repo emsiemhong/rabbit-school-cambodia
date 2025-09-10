@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="bg-gray-200 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[25%_75%] items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[25%_75%] items-start gap-4">
           {/* Left Column - Logo + Subscribe */}
           <div className="flex flex-col items-start">
             <Image

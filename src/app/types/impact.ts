@@ -1,5 +1,4 @@
 export interface ImpactData {
-  total: string;
+  value: number;
   description: string;
-  locale: string;
 }

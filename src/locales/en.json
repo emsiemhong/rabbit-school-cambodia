@@ -139,8 +139,12 @@
     }
   },
   "contactSection": {
+    "hero": {
+      "title": "CONTACT US",
+      "subtitle": "We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out."
+    },
     "section1": {
-      "title": "Get in touch",
+      "title": "GET IN TOUCH",
       "description": "Have any questions? We'd love to hear from you!",
       "emailLabel": "E-mail",
       "email": "sor.sothearorn@rabbitschoolcambodia.net",
@@ -152,16 +156,29 @@
     },
     "section2": {
       "title": "General Inquiries",
+      "subtitle": "Feel free to drop us a line below.",
       "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
       "nameError": "Name is required",
       "emailLabel": "Your Email",
+      "emailPlaceholder": "Enter your email",
       "emailErrorRequired": "Email is required",
       "emailErrorPattern": "Enter a valid email",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Enter subject",
       "messageLabel": "Your Message",
+      "messagePlaceholder": "Enter your message",
       "messageError": "Message is required",
       "sendButton": "Send",
       "sendingButton": "Sending...",
-      "successMessage": "✅ Thank you! Your message has been sent."
+      "successMessage": "✅ Thank you! Your message has been sent.",
+      "nameMinLength": "Name must be at least 2 characters long",
+      "messageMinLength": "Message must be at least 10 characters long"
+    },
+    "location": {
+      "title": "OUR LOCATION",
+      "address": "Toul Kork Primary School, Phnom Penh",
+      "mapLink": "View on Google Maps"
     }
   },
 
