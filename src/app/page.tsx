@@ -178,7 +178,7 @@ const ContentSection = ({
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight"
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -328,7 +328,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <motion.h2
               id="impact-title"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-4"
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -378,7 +378,7 @@ export default function Home() {
 
                     <div className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
                       <CountUp
-                        end={item.total ? parseInt(item.total.replace("+", ""), 10) : 0}
+                        end={item.value}
                         duration={2.5}
                         separator=","
                         preserveValue
@@ -402,7 +402,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <motion.h2
               id="partners-title"
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-4"
               variants={fadeInVariants}
               initial="hidden"
               whileInView="show"
@@ -465,7 +465,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight">
                 {t("donation.title")}
               </h2>
 
@@ -474,7 +474,7 @@ export default function Home() {
               </p>
 
               <div className="pt-4">
-                <DonationButtonLink text={t("donation.button")} />
+                <DonationButtonLink variant="primary" text={t("donation.button")} />
               </div>
             </motion.div>
 

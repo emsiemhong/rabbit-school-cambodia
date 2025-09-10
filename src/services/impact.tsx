@@ -1,5 +1,4 @@
-import { ImpactData } from "@/app/types/impact";
-
+import { APIResponse } from "@/app/types/response";
 
 export async function getImpactData(locale: string = "en") {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -14,7 +13,9 @@ export async function getImpactData(locale: string = "en") {
 
   const data = await res.json();
 
-  return data.data.map((item: ImpactData) => {
+
+  // return res;
+  return data.data.map((item: APIResponse) => {
     const value = parseInt(item.total.replace("+", ""), 10);
 
     return {
