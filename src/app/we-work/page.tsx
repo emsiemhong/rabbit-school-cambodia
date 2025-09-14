@@ -41,28 +41,38 @@ const ACTIVITY_IMAGES: ActivityImage[] = [
   { src: "/images/a8.png", alt: "Student achievements and celebrations" },
 ] as const;
 
-// Animation variants
+// Optimized animation variants
 const fadeInVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
-      // ease: "easeOut"
+      duration: 0.6
     }
   },
 };
 
-// Animation variants
-// const fadeInVariants = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-// };
+const slideInLeft = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6
+    }
+  },
+};
 
-const slideInVariants = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+const slideInRight = {
+  hidden: { opacity: 0, x: 30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6
+    }
+  },
 };
 
 const staggerContainer = {
@@ -70,32 +80,8 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
     },
-  },
-};
-
-const slideInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      // ease: "easeOut"
-    }
-  },
-};
-
-const slideInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      // ease: "easeOut"
-    }
   },
 };
 
@@ -112,7 +98,7 @@ const HeroSection = ({ title, subtitle }: { title: string; subtitle: string }) =
       quality={85}
     />
 
-    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#623D3C]/70 via-[#623D3C]/50 to-[#623D3C]/70" />
 
     <motion.div
       className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-8 max-w-6xl mx-auto"
@@ -122,7 +108,7 @@ const HeroSection = ({ title, subtitle }: { title: string; subtitle: string }) =
     >
       <motion.h1
         className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold drop-shadow-lg mb-6 leading-tight"
-        variants={slideInVariants}
+        variants={slideInLeft}
       >
         {title}
       </motion.h1>
@@ -149,7 +135,7 @@ const NavigationSection = ({ title, buttons }: { title: string; buttons: Navigat
         className="text-center"
       >
         <motion.h2
-          className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-900 mb-8"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#623D3C] mb-8"
           variants={fadeInVariants}
         >
           {title}
@@ -163,7 +149,7 @@ const NavigationSection = ({ title, buttons }: { title: string; buttons: Navigat
             <motion.a
               key={btn.id}
               href={`#${btn.id}`}
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-gray-100 text-amber-900 hover:bg-yellow-400 hover:text-gray-900 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 bg-[#F7F5F4] text-[#623D3C] hover:bg-[#623D3C] hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#623D3C] focus:ring-offset-2 shadow-sm hover:shadow-md"
               variants={fadeInVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -209,7 +195,7 @@ const ProgramSection = ({
           className="lg:w-1/2 space-y-6"
           variants={reverse ? slideInRight : slideInLeft}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-amber-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#623D3C] leading-tight">
             {title}
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
@@ -296,7 +282,7 @@ const VideoPlayer = ({
                 className="bg-white/90 rounded-full p-6 shadow-lg group-hover:bg-white transition-colors"
                 whileHover={{ scale: 1.1 }}
               >
-                <Play className="w-8 h-8 text-amber-900 ml-1" fill="currentColor" />
+                <Play className="w-8 h-8 text-[#623D3C] ml-1" fill="currentColor" />
               </motion.div>
             </div>
           </motion.div>
@@ -312,7 +298,7 @@ const VideoPlayer = ({
       </motion.div>
 
       <motion.div className="lg:w-1/2 space-y-4" variants={slideInRight}>
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C]">
           {title}
         </h2>
         <p className="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -333,12 +319,12 @@ const QuoteSection = ({ quote }: { quote: string }) => (
   >
     <div className="max-w-4xl mx-auto px-4">
       <motion.blockquote
-        className="relative bg-yellow-50 border-l-8 border-yellow-400 p-8 rounded-r-2xl shadow-lg"
+        className="relative bg-[#FFD45F]/20 border-l-8 border-[#FFD45F] p-8 rounded-r-2xl shadow-lg"
         whileHover={{ scale: 1.02, y: -2 }}
         transition={{ type: "spring", stiffness: 200 }}
       >
-        <div className="absolute -left-2 top-4 w-4 h-4 bg-yellow-400 rotate-45"></div>
-        <p className="text-lg md:text-2xl font-medium italic text-blue-800 leading-relaxed">
+        <div className="absolute -left-2 top-4 w-4 h-4 bg-[#FFD45F] rotate-45"></div>
+        <p className="text-lg md:text-2xl font-medium italic text-[#623D3C] leading-relaxed">
           &quot;{quote}&quot;
         </p>
       </motion.blockquote>
@@ -347,11 +333,11 @@ const QuoteSection = ({ quote }: { quote: string }) => (
 );
 
 const ActivityGallery = ({ title, images }: { title: string; images: ActivityImage[] }) => (
-  <section className="py-16 bg-gray-50" aria-labelledby="gallery-title">
+  <section className="py-16 bg-[#F7F5F4]" aria-labelledby="gallery-title">
     <div className="max-w-7xl mx-auto px-4">
       <motion.h2
         id="gallery-title"
-        className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-8"
+        className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -371,7 +357,7 @@ const ActivityGallery = ({ title, images }: { title: string; images: ActivityIma
           {images.map((image, index) => (
             <motion.div
               key={`activity-${index}`}
-              className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden border border-[#623D3C]/10"
               variants={fadeInVariants}
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 200 }}
@@ -412,7 +398,7 @@ const AdvocacyCards = ({
         variants={staggerContainer}
       >
         <motion.div className="text-center mb-12" variants={fadeInVariants}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-6">
             {title}
           </h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
@@ -427,7 +413,7 @@ const AdvocacyCards = ({
           {cards.map((card, index) => (
             <motion.article
               key={index}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden border border-[#623D3C]/10"
               variants={fadeInVariants}
               whileHover={{ scale: 1.02, y: -5 }}
               transition={{ type: "spring", stiffness: 200 }}
@@ -442,7 +428,7 @@ const AdvocacyCards = ({
                 />
               </div>
               <div className="p-6 text-center">
-                <p className="font-semibold text-amber-900 text-base md:text-lg">
+                <p className="font-semibold text-[#623D3C] text-base md:text-lg">
                   {card.caption}
                 </p>
               </div>
@@ -481,7 +467,7 @@ const HowWeWorkPage = () => {
   ], [t]);
 
   return (
-    <main className="bg-gray-50">
+    <main className="bg-[#F7F5F4]">
       {/* Hero Section */}
       <HeroSection
         title={t("weWorkPage.hero.title")}
@@ -506,21 +492,21 @@ const HowWeWorkPage = () => {
 
             <div className="space-y-4">
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                   {t("weWorkPage.programs.education.section1.title")}
                 </h4>
                 <p className="leading-relaxed">{t("weWorkPage.programs.education.section1.desc")}</p>
               </div>
 
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                   {t("weWorkPage.programs.education.section2.title")}
                 </h4>
                 <p className="leading-relaxed">{t("weWorkPage.programs.education.section1.desc")}</p>
               </div>
 
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                   {t("weWorkPage.programs.education.section3.title")}
                 </h4>
                 <p className="leading-relaxed">{t("weWorkPage.programs.education.section3.desc")}</p>
@@ -542,7 +528,7 @@ const HowWeWorkPage = () => {
               {t("weWorkPage.programs.vocational.desc")}
             </p>
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">
+              <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                 {t("weWorkPage.programs.vocational.section1.title")}
               </h4>
               <p className="leading-relaxed">{t("weWorkPage.programs.vocational.section1.desc")}</p>
@@ -561,7 +547,7 @@ const HowWeWorkPage = () => {
         content={
           <div className="space-y-6">
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">
+              <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                 {t("weWorkPage.programs.teacher.section1.title")}
               </h4>
               <p className="leading-relaxed mb-4">
@@ -570,7 +556,7 @@ const HowWeWorkPage = () => {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-2">
+              <h4 className="text-xl font-bold text-[#623D3C] mb-2">
                 {t("weWorkPage.programs.teacher.section2.title")}
               </h4>
               <p className="leading-relaxed mb-4">
@@ -602,7 +588,7 @@ const HowWeWorkPage = () => {
             variants={staggerContainer}
           >
             <motion.h2
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 text-center"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] text-center"
               variants={fadeInVariants}
             >
               {t("weWorkPage.stimulator.title")}

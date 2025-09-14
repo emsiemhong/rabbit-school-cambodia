@@ -71,7 +71,7 @@ const HeroSection = ({ title, subtitle }: { title: string; subtitle: string }) =
       sizes="100vw"
       quality={85}
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#623D3C]/70 via-[#623D3C]/50 to-[#623D3C]/70" />
 
     <motion.div
       className="absolute inset-0 flex flex-col justify-center px-4 md:px-12 lg:px-20 max-w-4xl"
@@ -87,7 +87,7 @@ const HeroSection = ({ title, subtitle }: { title: string; subtitle: string }) =
       </motion.h1>
 
       <motion.h2
-        className="text-yellow-300 text-xl sm:text-3xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg leading-snug"
+        className="text-[#FFD45F] text-xl sm:text-3xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg leading-snug"
         variants={slideInVariants}
         transition={{ delay: 0.2 }}
       >
@@ -129,7 +129,7 @@ const StorySection = ({
           variants={slideInVariants}
           transition={{ delay: 0.2 }}
         >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] leading-tight">
             {title}
           </h2>
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -174,7 +174,7 @@ const BannerSection = ({ title, text }: { title: string; text: string }) => (
       sizes="100vw"
       quality={85}
     />
-    <div className="absolute inset-0 bg-gradient-to-b from-red-800/70 via-red-800/50 to-red-800/70" />
+    <div className="absolute inset-0 bg-gradient-to-b from-[#623D3C]/70 via-[#623D3C]/50 to-[#623D3C]/70" />
 
     <motion.div
       className="relative z-10 text-center text-white px-4 md:px-12 max-w-4xl"
@@ -238,10 +238,10 @@ const GallerySection = ({ title }: { title: string }) => {
 
   return (
     <>
-      <section className="py-16 bg-gray-50" id="gallery">
+      <section className="py-16 bg-[#F7F5F4]" id="gallery">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <motion.h3
-            className="text-3xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-8 text-center"
+            className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-8 text-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -266,7 +266,7 @@ const GallerySection = ({ title }: { title: string }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
+                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white border border-[#623D3C]/10">
                   <Image
                     src={src}
                     alt={`Gallery image ${index + 1} - Students at Rabbit School`}
@@ -276,7 +276,7 @@ const GallerySection = ({ title }: { title: string }) => {
                     loading="lazy"
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-[#623D3C]/20 transition-colors duration-300" />
                 </div>
               </motion.div>
             ))}
@@ -303,7 +303,7 @@ const GallerySection = ({ title }: { title: string }) => {
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+              className="absolute -top-12 right-0 text-white hover:text-[#FFD45F] transition-colors z-10"
               aria-label="Close gallery"
             >
               <X className="w-8 h-8" />
@@ -312,7 +312,7 @@ const GallerySection = ({ title }: { title: string }) => {
             {/* Navigation Buttons */}
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-2"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-[#FFD45F] transition-colors z-10 bg-[#623D3C]/70 hover:bg-[#623D3C]/90 rounded-full p-2"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
@@ -320,7 +320,7 @@ const GallerySection = ({ title }: { title: string }) => {
 
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10 bg-black/50 rounded-full p-2"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-[#FFD45F] transition-colors z-10 bg-[#623D3C]/70 hover:bg-[#623D3C]/90 rounded-full p-2"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6" />
@@ -337,7 +337,7 @@ const GallerySection = ({ title }: { title: string }) => {
             />
 
             {/* Image Counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-black/50 px-3 py-1 rounded-full text-sm">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white bg-[#623D3C]/70 px-3 py-1 rounded-full text-sm">
               {currentIndex + 1} / {GALLERY_IMAGES.length}
             </div>
           </motion.div>
@@ -357,7 +357,7 @@ const SDGSection = ({ title, text, buttonText }: { title: string; text: string; 
         variants={staggerChildren}
       >
         <motion.h2
-          className="text-3xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-6"
+          className="text-3xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-6"
           variants={fadeInVariants}
         >
           {title}
@@ -380,22 +380,25 @@ const SDGSection = ({ title, text, buttonText }: { title: string; text: string; 
               variants={fadeInVariants}
               whileHover={{ scale: 1.1, rotate: 2 }}
               transition={{ type: "spring", stiffness: 300 }}
+              className="relative"
             >
-              <Image
-                src={src}
-                alt={alt}
-                width={180}
-                height={180}
-                className="w-full aspect-square object-cover rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                loading="lazy"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-2 border border-[#623D3C]/10">
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={180}
+                  height={180}
+                  className="w-full aspect-square object-cover rounded-lg"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div variants={fadeInVariants} className="display: inline-block">
-          <DonationLink text={buttonText} />
+          <DonationLink variant="secondary" text={buttonText} />
         </motion.div>
       </motion.div>
     </div>
@@ -426,7 +429,7 @@ const Page = () => {
       imageSrc: "/images/general-3.png",
       imageAlt: "Community support and engagement program",
       reverse: true,
-      bg: "bg-teal-100",
+      bg: "bg-[#8BAEA7]/20",
     },
     {
       titleKey: "ourStoryPage.section4.title",
@@ -437,7 +440,7 @@ const Page = () => {
   ], []);
 
   return (
-    <main className="bg-gray-50">
+    <main className="bg-[#F7F5F4]">
       <HeroSection
         title={t("ourStoryPage.hero.title")}
         subtitle={t("ourStoryPage.hero.subtitle")}

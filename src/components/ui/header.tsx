@@ -98,17 +98,17 @@ export default function Header() {
     const baseClasses = [
       isMobile ? "block text-base py-3" : "text-sm",
       "px-4 py-2 font-semibold transition-all duration-300 ease-in-out",
-      "focus:outline-none focus:ring-2 focus:ring-[#922C2C] focus:ring-offset-2",
+      "focus:outline-none focus:ring-2 focus:ring-[#623D3C] focus:ring-offset-2",
       isMobile ? "rounded-lg mx-2" : "rounded-full"
     ]
 
     const stateClasses = isActive
       ? isMobile
-        ? "text-[#922C2C] bg-[#922C2C]/10 border-l-4 border-[#922C2C]"
-        : "text-[#922C2C] bg-[#922C2C]/10 border-b-2 border-[#922C2C]"
+        ? "text-white bg-[#623D3C] border-l-4 border-[#FFD45F]"
+        : "text-white bg-[#623D3C] shadow-md"
       : isMobile
-        ? "text-gray-700 hover:text-[#922C2C] hover:bg-[#F8F8FF] hover:border-l-4 hover:border-[#922C2C]/30"
-        : "text-gray-700 hover:text-[#922C2C] hover:bg-[#F8F8FF] relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:transform after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-[#922C2C] after:transition-all after:duration-300 hover:after:w-full"
+        ? "text-[#623D3C] hover:text-white hover:bg-[#623D3C] hover:border-l-4 hover:border-[#FFD45F]"
+        : "text-[#623D3C] hover:text-white hover:bg-[#623D3C] hover:shadow-md relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:transform after:-translate-x-1/2 after:w-0 after:h-0.5 after:bg-[#FFD45F] after:transition-all after:duration-300 hover:after:w-full"
 
     return [...baseClasses, stateClasses].join(" ")
   }, [])
@@ -117,8 +117,8 @@ export default function Header() {
   const LanguageSwitcher = ({ mobile = false }: { mobile?: boolean }) => {
     if (mobile) {
       return (
-        <div className="pt-6 border-t border-gray-100 mt-4">
-          <div className="px-4 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest">
+        <div className="pt-6 border-t border-[#F7F5F4] mt-4">
+          <div className="px-4 py-2 text-xs font-bold text-[#623D3C] uppercase tracking-widest">
             {t("navbar.language")}
           </div>
           <div className="space-y-2 px-2">
@@ -126,9 +126,9 @@ export default function Header() {
               <button
                 key={lang}
                 onClick={() => toggleLanguage(lang as Language)}
-                className={`w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#922C2C] ${currentLanguage === lang
-                    ? "bg-[#922C2C]/15 text-[#922C2C] border-l-4 border-[#922C2C] font-semibold"
-                    : "text-gray-700 hover:text-[#922C2C] hover:bg-[#F8F8FF]"
+                className={`w-full text-left px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#623D3C] ${currentLanguage === lang
+                  ? "bg-[#623D3C] text-white border-l-4 border-[#FFD45F] font-semibold shadow-md"
+                  : "text-[#623D3C] hover:text-white hover:bg-[#623D3C] hover:shadow-md"
                   }`}
                 aria-pressed={currentLanguage === lang}
               >
@@ -146,7 +146,7 @@ export default function Header() {
           <Button
             variant="outline"
             size="sm"
-            className="gap-2 bg-white hover:bg-[#F8F8FF] border-gray-200 hover:border-[#922C2C] text-gray-700 hover:text-[#922C2C] transition-all duration-300 focus:ring-2 focus:ring-[#922C2C] shadow-sm hover:shadow-md"
+            className="gap-2 bg-white hover:bg-[#623D3C] border-[#623D3C]/20 hover:border-[#623D3C] text-[#623D3C] hover:text-white transition-all duration-300 focus:ring-2 focus:ring-[#623D3C] shadow-sm hover:shadow-md"
             aria-label={`Current language: ${LANGUAGES[currentLanguage]}`}
           >
             <Globe className="h-4 w-4" aria-hidden="true" />
@@ -158,15 +158,15 @@ export default function Header() {
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"
-          className="w-36 bg-white border border-gray-100 shadow-lg rounded-lg overflow-hidden"
+          className="w-36 bg-white border border-[#623D3C]/10 shadow-lg rounded-lg overflow-hidden"
         >
           {Object.entries(LANGUAGES).map(([lang, label]) => (
             <DropdownMenuItem
               key={lang}
               onClick={() => toggleLanguage(lang as Language)}
               className={`cursor-pointer px-4 py-3 text-sm transition-colors duration-200 ${currentLanguage === lang
-                  ? "bg-[#922C2C]/10 text-[#922C2C] font-semibold"
-                  : "text-gray-700 hover:bg-[#F8F8FF] hover:text-[#922C2C]"
+                ? "bg-[#623D3C] text-white font-semibold"
+                : "text-[#623D3C] hover:bg-[#623D3C] hover:text-white"
                 }`}
               aria-current={currentLanguage === lang ? "true" : "false"}
             >
@@ -181,8 +181,8 @@ export default function Header() {
   return (
     <header
       className={`bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50 transition-all duration-300 ${isScrolled
-          ? "shadow-lg border-gray-200/60 bg-white/98"
-          : "shadow-sm border-gray-100"
+        ? "shadow-lg border-[#623D3C]/20 bg-white/98"
+        : "shadow-sm border-[#623D3C]/10"
         }`}
       role="banner"
     >
@@ -236,7 +236,7 @@ export default function Header() {
 
             {/* Donation Link */}
             <div className="hidden sm:block">
-              <DonationLink size="sm" text={t("navbar.donate")} />
+              <DonationLink variant="secondary" size="sm" text={t("navbar.donate")} />
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -245,15 +245,15 @@ export default function Header() {
                 variant="ghost"
                 size="sm"
                 onClick={toggleMobileMenu}
-                className="p-2 hover:bg-[#F8F8FF] focus:ring-2 focus:ring-[#922C2C] transition-colors duration-200"
+                className="p-2 hover:bg-[#623D3C] hover:text-white focus:ring-2 focus:ring-[#623D3C] transition-colors duration-200"
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
                 {isMobileMenuOpen ? (
-                  <X className="h-6 w-6 text-gray-700" aria-hidden="true" />
+                  <X className="h-6 w-6 text-[#623D3C] hover:text-white" aria-hidden="true" />
                 ) : (
-                  <Menu className="h-6 w-6 text-gray-700" aria-hidden="true" />
+                  <Menu className="h-6 w-6 text-[#623D3C]" aria-hidden="true" />
                 )}
               </Button>
             </div>
@@ -264,7 +264,7 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div
             id="mobile-menu"
-            className="lg:hidden border-t border-gray-100 bg-white/98 backdrop-blur-sm shadow-lg rounded-b-lg"
+            className="lg:hidden border-t border-[#F7F5F4] bg-white/98 backdrop-blur-sm shadow-lg rounded-b-lg"
             role="navigation"
             aria-label="Mobile navigation"
           >

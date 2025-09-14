@@ -167,3 +167,9 @@ span {
 p {
   font-family: "arial", sans-serif;
 }
+
+blockquote p{
+  font-family: "playfair", serif;
+  font-weight: 400;
+  font-style: italic;
+}

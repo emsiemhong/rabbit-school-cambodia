@@ -21,18 +21,17 @@ const DonationLink = forwardRef<HTMLAnchorElement, DonationLinkProps>(
     variant = "primary",
     size = "md"
   }, ref) => {
-
-    // Base styles following your brand guidelines
+    // Base styles following your Earth brown brand guidelines
     const getVariantStyles = () => {
       switch (variant) {
         case "primary":
-          return "bg-[#F5AE6A] hover:bg-[#F5AE6A]/90 text-white shadow-lg hover:shadow-xl";
+          return "bg-[#623D3C] hover:bg-[#623D3C]/90 text-white shadow-lg hover:shadow-xl";
         case "secondary":
-          return "bg-[#FED45F] hover:bg-[#FED45F]/90 text-[#001F3F] shadow-md hover:shadow-lg";
+          return "bg-[#FFD45F] hover:bg-[#FFD45F]/90 text-[#623D3C] shadow-md hover:shadow-lg";
         case "outline":
-          return "border-2 border-[#F5AE6A] text-[#F5AE6A] hover:bg-[#F5AE6A] hover:text-white bg-transparent";
+          return "border-2 border-[#623D3C] text-[#623D3C] hover:bg-[#623D3C] hover:text-white bg-transparent";
         default:
-          return "bg-[#F5AE6A] hover:bg-[#F5AE6A]/90 text-white shadow-lg hover:shadow-xl";
+          return "bg-[#623D3C] hover:bg-[#623D3C]/90 text-white shadow-lg hover:shadow-xl";
       }
     };
 
@@ -56,23 +55,32 @@ const DonationLink = forwardRef<HTMLAnchorElement, DonationLinkProps>(
       return "sm:inline-flex";
     };
 
+    const getFocusStyles = () => {
+      switch (variant) {
+        case "secondary":
+          return "focus:ring-[#FFD45F]";
+        case "outline":
+          return "focus:ring-[#623D3C]";
+        default:
+          return "focus:ring-[#623D3C]";
+      }
+    };
+
     const buttonStyles = [
       // Base styles
       "group inline-flex items-center justify-center gap-3 font-semibold rounded-full",
       "transition-all duration-300 ease-out transform",
       "hover:scale-[1.02] active:scale-[0.98]",
-      "focus:outline-none focus:ring-2 focus:ring-[#F5AE6A] focus:ring-offset-2",
+      "focus:outline-none focus:ring-2 focus:ring-offset-2",
       "disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none",
-
       // Variant styles
       getVariantStyles(),
-
       // Size styles
       getSizeStyles(),
-
       // Mobile/responsive styles
       getMobileStyles(),
-
+      // Focus styles
+      getFocusStyles(),
       // Custom className
       className
     ].filter(Boolean).join(" ");
