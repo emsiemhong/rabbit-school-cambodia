@@ -52,34 +52,34 @@ const CONTACT_INFO: ContactInfo[] = [
   }
 ] as const;
 
-// Animation variants
+// Optimized animation variants
 const fadeInLeft = {
-  hidden: { opacity: 0, x: -50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8} }
+  hidden: { opacity: 0, x: -30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
 };
 
 const fadeInRight = {
-  hidden: { opacity: 0, x: 50 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  hidden: { opacity: 0, x: 30 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
 };
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.2 }
+    transition: { staggerChildren: 0.15 }
   }
 };
 
 // Components
 const FormField: React.FC<FormFieldProps> = ({ label, error, children }) => (
   <div className="space-y-2">
-    <label className="block text-sm font-medium text-gray-700">
+    <label className="block text-sm font-medium text-[#623D3C]">
       {label}
     </label>
     {children}
@@ -101,20 +101,20 @@ const ContactInfoItem: React.FC<{
   return (
     <motion.div
       variants={fadeInUp}
-      className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+      className="flex items-start gap-4 p-4 bg-[#F7F5F4] rounded-lg hover:bg-[#8BAEA7]/10 transition-colors duration-200 border border-[#623D3C]/10"
     >
-      <div className="p-2 bg-[#922C2C] rounded-full">
+      <div className="p-2 bg-[#623D3C] rounded-full">
         <IconComponent className="w-5 h-5 text-white" aria-hidden="true" />
       </div>
       <div className="flex-1">
-        <dt className="text-sm font-medium text-gray-600 mb-1">
+        <dt className="text-sm font-medium text-[#623D3C]/80 mb-1">
           {t(info.labelKey)}
         </dt>
         <dd className="text-base">
           {info.href ? (
             <a
               href={info.href}
-              className="text-[#922C2C] hover:text-[#922C2C]/80 transition-colors duration-200 focus:outline-none focus:underline"
+              className="text-[#623D3C] hover:text-[#623D3C]/80 transition-colors duration-200 focus:outline-none focus:underline"
               {...(info.external && {
                 target: "_blank",
                 rel: "noopener noreferrer"
@@ -123,7 +123,7 @@ const ContactInfoItem: React.FC<{
               {t(info.valueKey)}
             </a>
           ) : (
-            <span className="text-gray-900">{t(info.valueKey)}</span>
+            <span className="text-[#623D3C]">{t(info.valueKey)}</span>
           )}
         </dd>
       </div>
@@ -208,7 +208,7 @@ const ContactSection: React.FC = () => {
   }, [reset]);
 
   return (
-    <main className="bg-gray-50">
+    <main className="bg-[#F7F5F4]">
       {/* Hero Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -221,13 +221,13 @@ const ContactSection: React.FC = () => {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#922C2C] mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#623D3C] mb-6"
             >
               {t("contactSection.hero.title")}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg text-[#623D3C]/80 max-w-3xl mx-auto leading-relaxed"
             >
               {t("contactSection.hero.subtitle")}
             </motion.p>
@@ -246,10 +246,10 @@ const ContactSection: React.FC = () => {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInLeft}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-6">
                 {t("contactSection.section1.title")}
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-[#623D3C]/80 mb-8 leading-relaxed">
                 {t("contactSection.section1.description")}
               </p>
 
@@ -267,9 +267,9 @@ const ContactSection: React.FC = () => {
 
               <motion.div
                 variants={fadeInUp}
-                className="mt-8 p-4 bg-blue-50 rounded-lg border border-blue-200"
+                className="mt-8 p-4 bg-[#FFD45F]/20 rounded-lg border border-[#FFD45F]/30"
               >
-                <p className="text-blue-800 text-sm leading-relaxed">
+                <p className="text-[#623D3C] text-sm leading-relaxed">
                   {t("contactSection.section1.instruction")}
                 </p>
               </motion.div>
@@ -295,11 +295,11 @@ const ContactSection: React.FC = () => {
               </div>
 
               {/* Overlay with location info */}
-              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                <h3 className="font-semibold text-gray-900 mb-1">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-[#623D3C]/10">
+                <h3 className="font-semibold text-[#623D3C] mb-1">
                   {t("contactSection.location.title")}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-[#623D3C]/80">
                   {t("contactSection.location.address")}
                 </p>
               </div>
@@ -309,7 +309,7 @@ const ContactSection: React.FC = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-[#F7F5F4]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
@@ -317,12 +317,12 @@ const ContactSection: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
           >
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-[#623D3C]/10">
               <div className="text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#623D3C] mb-4">
                   {t("contactSection.section2.title")}
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-[#623D3C]/80">
                   {t("contactSection.section2.subtitle")}
                 </p>
               </div>
@@ -332,10 +332,10 @@ const ContactSection: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3"
+                  className="mb-6 p-4 bg-[#8BAEA7]/20 border border-[#8BAEA7]/30 rounded-lg flex items-center gap-3"
                 >
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <p className="text-green-800">
+                  <CheckCircle className="w-5 h-5 text-[#8BAEA7]" />
+                  <p className="text-[#623D3C]">
                     {t("contactSection.section2.successMessage")}
                   </p>
                 </motion.div>
@@ -363,7 +363,7 @@ const ContactSection: React.FC = () => {
                     <input
                       type="text"
                       {...register("name", validationRules.name)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#922C2C] focus:border-[#922C2C] transition-colors duration-200 bg-white"
+                      className="w-full px-4 py-3 border border-[#623D3C]/20 rounded-lg focus:ring-2 focus:ring-[#623D3C] focus:border-[#623D3C] transition-colors duration-200 bg-white"
                       placeholder={t("contactSection.section2.namePlaceholder")}
                       aria-invalid={errors.name ? 'true' : 'false'}
                     />
@@ -376,7 +376,7 @@ const ContactSection: React.FC = () => {
                     <input
                       type="email"
                       {...register("email", validationRules.email)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#922C2C] focus:border-[#922C2C] transition-colors duration-200 bg-white"
+                      className="w-full px-4 py-3 border border-[#623D3C]/20 rounded-lg focus:ring-2 focus:ring-[#623D3C] focus:border-[#623D3C] transition-colors duration-200 bg-white"
                       placeholder={t("contactSection.section2.emailPlaceholder")}
                       aria-invalid={errors.email ? 'true' : 'false'}
                     />
@@ -389,7 +389,7 @@ const ContactSection: React.FC = () => {
                   <input
                     type="text"
                     {...register("subject")}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#922C2C] focus:border-[#922C2C] transition-colors duration-200 bg-white"
+                    className="w-full px-4 py-3 border border-[#623D3C]/20 rounded-lg focus:ring-2 focus:ring-[#623D3C] focus:border-[#623D3C] transition-colors duration-200 bg-white"
                     placeholder={t("contactSection.section2.subjectPlaceholder")}
                   />
                 </FormField>
@@ -401,7 +401,7 @@ const ContactSection: React.FC = () => {
                   <textarea
                     rows={5}
                     {...register("message", validationRules.message)}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#922C2C] focus:border-[#922C2C] transition-colors duration-200 bg-white resize-vertical"
+                    className="w-full px-4 py-3 border border-[#623D3C]/20 rounded-lg focus:ring-2 focus:ring-[#623D3C] focus:border-[#623D3C] transition-colors duration-200 bg-white resize-vertical"
                     placeholder={t("contactSection.section2.messagePlaceholder")}
                     aria-invalid={errors.message ? 'true' : 'false'}
                   />
@@ -411,7 +411,7 @@ const ContactSection: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#922C2C] hover:bg-[#922C2C]/90 disabled:bg-gray-400 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-[1.02] disabled:scale-100 focus:outline-none focus:ring-2 focus:ring-[#922C2C] focus:ring-offset-2"
+                    className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#623D3C] hover:bg-[#623D3C]/90 disabled:bg-gray-400 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-[1.02] disabled:scale-100 focus:outline-none focus:ring-2 focus:ring-[#623D3C] focus:ring-offset-2 shadow-lg hover:shadow-xl"
                   >
                     {isSubmitting ? (
                       <>

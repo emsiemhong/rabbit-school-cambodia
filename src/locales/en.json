@@ -136,6 +136,12 @@
         "text": "Join our passionate team and help empower children and youth with intellectual disabilities and autism to reach their full potential.",
         "button": "Jobs & Work"
       }
+    },
+    "cta": {
+      "title": "Ready to Make a Difference?",
+      "description": "Your support can change lives. Join us in creating a more inclusive world where every child has the opportunity to thrive.",
+      "primaryButton": "Get Involved",
+      "secondaryButton": "Contact Us"
     }
   },
   "contactSection": {

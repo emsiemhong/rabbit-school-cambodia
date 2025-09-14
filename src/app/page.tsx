@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useTranslations, useLocale } from 'next-intl';
-import DonationButtonLink from "@/components/ui/donation-link";
+import DonationLink from "@/components/ui/donation-link";
 import { getImpactData } from "../services/impact";
 
 // Image imports
@@ -106,7 +106,7 @@ const HeroSection = ({
     />
 
     <div
-      className="absolute inset-0 bg-black"
+      className="absolute inset-0 bg-[#623D3C]"
       style={{ opacity: overlayOpacity }}
       aria-hidden="true"
     />
@@ -144,7 +144,7 @@ const HeroSection = ({
         >
           <Link
             href={buttonHref}
-            className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2"
+            className="inline-flex items-center gap-2 bg-[#FFD45F] hover:bg-[#FFD45F]/90 text-[#623D3C] font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#FFD45F] focus:ring-offset-2"
             aria-label={`${buttonText} - Learn more about our story`}
           >
             <span>{buttonText}</span>
@@ -163,7 +163,7 @@ const ContentSection = ({
   buttonHref,
   imageSrc,
   imageAlt,
-  backgroundColor = "bg-gray-200",
+  backgroundColor = "bg-[#F7F5F4]",
   imageOnLeft = false
 }: SectionProps) => (
   <section className={`${backgroundColor} py-16`}>
@@ -178,7 +178,7 @@ const ContentSection = ({
           viewport={{ once: true, margin: "-100px" }}
         >
           <motion.h2
-            className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] leading-tight"
             initial={{ y: -30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -205,7 +205,7 @@ const ContentSection = ({
           >
             <Link
               href={buttonHref}
-              className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
+              className="inline-flex items-center gap-2 bg-[#623D3C] hover:bg-[#623D3C]/90 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#623D3C] focus:ring-offset-2 shadow-md hover:shadow-lg"
             >
               <span>{buttonText}</span>
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -244,8 +244,8 @@ const ContentSection = ({
 
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center py-12">
-    <Loader2 className="w-8 h-8 animate-spin text-amber-600" />
-    <span className="ml-2 text-gray-600">Loading impact data...</span>
+    <Loader2 className="w-8 h-8 animate-spin text-[#623D3C]" />
+    <span className="ml-2 text-[#623D3C]">Loading impact data...</span>
   </div>
 );
 
@@ -254,7 +254,7 @@ const ErrorMessage = ({ onRetry }: { onRetry: () => void }) => (
     <p className="text-red-600 mb-4">Failed to load impact data</p>
     <button
       onClick={onRetry}
-      className="text-amber-600 hover:text-amber-700 font-medium focus:outline-none focus:underline"
+      className="text-[#623D3C] hover:text-[#623D3C]/80 font-medium focus:outline-none focus:underline"
     >
       Try again
     </button>
@@ -319,16 +319,16 @@ export default function Home() {
         buttonHref="/we-work"
         imageSrc={pic2}
         imageAlt="Children learning together at Rabbit School"
-        backgroundColor="bg-gray-200"
+        backgroundColor="bg-[#F7F5F4]"
       />
 
       {/* Impact Section */}
-      <section className="bg-amber-400 py-16" aria-labelledby="impact-title">
+      <section className="bg-[#FFD45F] py-16" aria-labelledby="impact-title">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <motion.h2
               id="impact-title"
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-4"
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -338,7 +338,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="text-amber-800 text-lg md:text-xl max-w-4xl mx-auto"
+              className="text-[#623D3C]/80 text-lg md:text-xl max-w-4xl mx-auto"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
@@ -366,17 +366,17 @@ export default function Home() {
                   <motion.div
                     key={`${item.description}-${index}`}
                     variants={cardVariants}
-                    className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+                    className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 border border-[#623D3C]/10"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="flex justify-center mb-4">
-                      <div className="p-3 bg-amber-100 rounded-full">
-                        <Icon className="w-8 h-8 text-amber-600" aria-hidden="true" />
+                      <div className="p-3 bg-[#8BAEA7]/20 rounded-full">
+                        <Icon className="w-8 h-8 text-[#623D3C]" aria-hidden="true" />
                       </div>
                     </div>
 
-                    <div className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-2">
+                    <div className="text-3xl md:text-4xl font-extrabold text-[#623D3C] mb-2">
                       <CountUp
                         end={item.value}
                         duration={2.5}
@@ -397,12 +397,12 @@ export default function Home() {
       </section>
 
       {/* Partners Section */}
-      <section className="bg-gray-50 py-16" aria-labelledby="partners-title">
+      <section className="bg-[#F7F5F4] py-16" aria-labelledby="partners-title">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <motion.h2
               id="partners-title"
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 mb-4"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] mb-4"
               variants={fadeInVariants}
               initial="hidden"
               whileInView="show"
@@ -412,7 +412,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="text-amber-800 text-lg md:text-xl max-w-4xl mx-auto"
+              className="text-[#623D3C]/80 text-lg md:text-xl max-w-4xl mx-auto"
               variants={fadeInVariants}
               initial="hidden"
               whileInView="show"
@@ -455,7 +455,7 @@ export default function Home() {
       </section>
 
       {/* Donation Section */}
-      <section className="bg-yellow-300 py-16">
+      <section className="bg-[#FFD45F] py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -465,16 +465,16 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-amber-900 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#623D3C] leading-tight">
                 {t("donation.title")}
               </h2>
 
-              <p className="text-amber-800 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-[#623D3C]/80 text-base md:text-lg lg:text-xl leading-relaxed max-w-xl lg:max-w-none">
                 {t("donation.description")}
               </p>
 
-              <div className="pt-4">
-                <DonationButtonLink variant="primary" text={t("donation.button")} />
+              <div className="display: inline-block">
+                <DonationLink variant="primary" text={t("donation.button")} />
               </div>
             </motion.div>
 
@@ -506,7 +506,7 @@ export default function Home() {
         buttonHref="/get-involved"
         imageSrc={getInvolvedPic}
         imageAlt="Students and volunteers at Rabbit School"
-        backgroundColor="bg-teal-400"
+        backgroundColor="bg-[#8BAEA7]"
         imageOnLeft={true}
       />
     </main>
